@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, TextInput, TouchableOpacity } from "react-native";
-import { styles } from "../global/styles";
+import { styles } from "./styles";
 
 export default function Register(){
     

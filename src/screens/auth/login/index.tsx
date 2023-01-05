@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, TextInput } from "react-native";
-import { styles } from "../global/styles";
+import { styles } from "./styles";
 
 export default function Login(){
 
