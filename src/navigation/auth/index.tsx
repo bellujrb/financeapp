@@ -1,6 +1,6 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { StackNavigationProp, createStackNavigator } from "@react-navigation/stack";
+import { createStackNavigator } from "@react-navigation/stack";
 import Outset from "../../screens/auth/outset";
 import Login from "../../screens/auth/login";
 import Register from "../../screens/auth/register";
@@ -11,8 +11,6 @@ export type RootStackParams = {
     login: any;
     register: any;
 };
-
-export type propsStack = StackNavigationProp<RootStackParams>
 
 const Stack = createStackNavigator<RootStackParams>();
 
