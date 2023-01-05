@@ -1,4 +1,3 @@
-import React from "react";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -15,6 +14,12 @@ export const styles = StyleSheet.create({
 
         letterSpacing: 0.03,
         color: '#FFFFFF'
+    },
+    aligninputs:{
+        alignItems: 'center'
+    },
+    spaceinputs:{
+        margin: 10
     },
     textinput:{
         fontFamily: 'Poppins',
@@ -85,6 +90,9 @@ export const styles = StyleSheet.create({
 
         letterSpacing: 0.03,
         color: '#6C6982'
+    },
+    textregisterorganize:{
+        marginLeft: 5
     },
     textregister:{
         fontFamily: 'Poppins',

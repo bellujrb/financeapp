@@ -8,12 +8,8 @@ export default function LoginView(){
 
             <Text style={styles.titlelogin}>Login</Text>
 
-            <View style={{
-                alignItems: 'center'
-            }}>
-            <View style={{
-                margin: 10
-            }}>
+            <View style={styles.aligninputs}>
+            <View style={styles.spaceinputs}>
                 <Text style={styles.textinput}>E-mail</Text>
                 
                 <TextInput
@@ -21,9 +17,7 @@ export default function LoginView(){
                 style={styles.input}/>
             </View>
 
-            <View style={{
-                margin: 10
-            }}> 
+            <View style={styles.spaceinputs}> 
                 <Text style={styles.textinput}>Senha</Text>
                 
                 <TextInput
@@ -43,9 +37,7 @@ export default function LoginView(){
 
             <View style={styles.organizenoaccount}>
                 <Text style={styles.textnoaccount}>Não tem uma conta?</Text>
-                <TouchableOpacity style={{
-                    marginLeft: 5
-                }}>
+                <TouchableOpacity style={styles.textregisterorganize}>
                     <Text style={styles.textregister}>Register Agora</Text>
                 </TouchableOpacity>
             </View>
