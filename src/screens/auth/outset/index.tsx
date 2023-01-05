@@ -1,8 +1,18 @@
 import React from "react";
 import { Text, View, Image, TouchableOpacity } from "react-native";
-import { styles } from "./Styles";
+import { styles } from "./styles";
 
-export default function OutsetView(){
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParams } from "../../../navigation/auth";
+
+export default function Outset(){
+
+    const nav = useNavigation<StackNavigationProp<RootStackParams>>();
+
+    function goLogin():void{
+        nav.navigate('login')
+    }
 
     return (
         <View style={styles.container}>
@@ -15,7 +25,7 @@ export default function OutsetView(){
             <Text style={styles.title}>Finanças</Text>
             <Text style={styles.subtitle}>Organize suas finanças</Text>
             </View>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={goLogin}>
                 <Text style={styles.buttontext}>IR</Text>
             </TouchableOpacity>
         </View>
