@@ -1,39 +1,55 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, TextInput } from "react-native";
+import { styles } from "./Styles";
 export default function LoginView(){
 
     return (
-        <View style={{
-            flex: 1,
-            backgroundColor: '#201937',
-        }}>
+        <View style={styles.container}>
+
+            <Text style={styles.titlelogin}>Login</Text>
+
             <View style={{
-                padding: 40,
-            }}>
-            <TouchableOpacity style={{
-                width: 40,
-                height: 40,
-
-                backgroundColor: '#5857CD',
-                borderRadius: 16,
-
-                justifyContent: 'center',
                 alignItems: 'center'
             }}>
-                <Text>X</Text>
+            <View style={{
+                margin: 10
+            }}>
+                <Text style={styles.textinput}>E-mail</Text>
+                
+                <TextInput
+                placeholder="Digite seu e-mail"
+                style={styles.input}/>
+            </View>
+
+            <View style={{
+                margin: 10
+            }}> 
+                <Text style={styles.textinput}>Senha</Text>
+                
+                <TextInput
+                placeholder="Digite sua senha"
+                style={styles.input}/>
+            </View>
+            </View>
+
+            <TouchableOpacity style={styles.organizerecover}>
+                <Text style={styles.titlerecover}>Esqueceu sua senha?</Text>
             </TouchableOpacity>
 
-            <Text style={{
-                marginTop: 20,
-                
-                fontFamily: 'Poppins',
-                fontWeight: '600',
-                fontSize: 32,
+            <View style={styles.organizeinputlogin}>
+            <TouchableOpacity style={styles.inputlogin}>
+                <Text style={styles.textlogin}>LOGAR</Text>
+            </TouchableOpacity>
 
-                letterSpacing: 0.03,
-                color: '#FFFFFF'
-            }}>Register</Text>
-        </View>
+            <View style={styles.organizenoaccount}>
+                <Text style={styles.textnoaccount}>Não tem uma conta?</Text>
+                <TouchableOpacity style={{
+                    marginLeft: 5
+                }}>
+                    <Text style={styles.textregister}>Register Agora</Text>
+                </TouchableOpacity>
+            </View>
+            </View>
         </View>
     )
 }
