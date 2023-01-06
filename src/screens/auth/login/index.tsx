@@ -1,8 +1,17 @@
 import React from "react";
 import { View, Text, TouchableOpacity, TextInput } from "react-native";
 import { styles } from "./styles";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParams } from "../../../navigation/auth";
 
 export default function Login(){
+
+    const nav = useNavigation<StackNavigationProp<RootStackParams>>()
+
+    function goHome(){
+        nav.navigate('home')
+    }
 
     return (
         <View style={styles.container}>
@@ -32,7 +41,7 @@ export default function Login(){
             </TouchableOpacity>
 
             <View style={styles.organizeinputlogin}>
-            <TouchableOpacity style={styles.inputlogin}>
+            <TouchableOpacity style={styles.inputlogin} onPress={goHome}>
                 <Text style={styles.textlogin}>LOGAR</Text>
             </TouchableOpacity>
 

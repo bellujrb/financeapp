@@ -5,11 +5,13 @@ import Outset from "../../screens/auth/outset";
 import Login from "../../screens/auth/login";
 import Register from "../../screens/auth/register";
 import 'react-native-gesture-handler';
+import Home from "../../screens/home";
 
 export type RootStackParams = {
     outset: any;
     login: any;
     register: any;
+    home: any;
 };
 
 const Stack = createStackNavigator<RootStackParams>();
@@ -43,6 +45,12 @@ export default function AuthScreens(){
                         headerShown: false
                     }}
                 />
+                <Stack.Screen
+                name="home"
+                component={Home}
+                options={{
+                    headerShown: false
+                }}/>
         </Stack.Navigator>
     </NavigationContainer>
     )
