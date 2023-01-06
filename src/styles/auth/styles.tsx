@@ -1,10 +1,20 @@
 import { StyleSheet } from "react-native";
 
-export const styles = StyleSheet.create({
+export const global = StyleSheet.create({
     container:{
         flex: 1,
         backgroundColor: '#201937',
     },
+    aligninputs:{
+        alignItems: 'center'
+    },
+    alignbuttonandtext:{
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+})
+
+export const header = StyleSheet.create({
     titlelogin:{
         padding: 40,
                 
@@ -15,9 +25,9 @@ export const styles = StyleSheet.create({
         letterSpacing: 0.03,
         color: '#FFFFFF'
     },
-    aligninputs:{
-        alignItems: 'center'
-    },
+})
+
+export const input = StyleSheet.create({
     spaceinputs:{
         margin: 10
     },
@@ -46,6 +56,9 @@ export const styles = StyleSheet.create({
         color: '#AAACAE',
         padding: 10
     },
+})
+
+export const ctext = StyleSheet.create({
     organizerecover:{
         flexDirection: 'row-reverse',
         marginLeft: 28
@@ -58,11 +71,14 @@ export const styles = StyleSheet.create({
         letterSpacing: 0.3,
         color: '#FFFFFF'
     },
-    organizeinputlogin:{
+})
+
+export const button = StyleSheet.create({
+    organizebutton:{
         alignItems: 'center',
         marginTop: 20,
     },
-    inputlogin:{
+    button:{
         width: 300,
         height: 54,
 
@@ -72,13 +88,16 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    textlogin:{
+    textbutton:{
         fontFamily: 'Poppins',
         fontWeight: '600',
         fontSize: 16,
 
         color: '#FFFFFF',
     },
+})
+
+export const msgacc = StyleSheet.create({
     organizenoaccount:{
         flexDirection: 'row',
         marginTop: 20
