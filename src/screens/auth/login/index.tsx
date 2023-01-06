@@ -14,7 +14,6 @@ export default function Login(){
 
     const nav = useNavigation<StackNavigationProp<RootStackParams>>()
 
-
     return (
         <View style={global.container}>
 
