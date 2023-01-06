@@ -1,60 +1,40 @@
 import React from "react";
-import { Text, View, TextInput, TouchableOpacity } from "react-native";
-import { styles } from "./styles";
+import { View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParams } from "../../../navigation/auth";
+import { Header } from "../../../components/auth/Header";
+import { Input } from "../../../components/auth/Input";
+import { ClickText } from "../../../components/auth/ClickText";
+import { Button } from "../../../components/auth/Button";
+import { MsgAccount } from "../../../components/auth/MsgAccount";
+import { global } from "../../../styles/auth/styles";
 
 export default function Register(){
-    
+
+    const nav = useNavigation<StackNavigationProp<RootStackParams>>()
+
     return (
-        <View style={styles.container}>
+        <View style={global.container}>
 
-            <Text style={styles.titlelogin}>Register</Text>
+            <Header name="Register"/>
+            <View style={global.aligninputs}>
 
-            <View style={styles.aligninputs}>
-            <View style={styles.spaceinputs}>
-                <Text style={styles.textinput}>Nome</Text>
-                
-                <TextInput
-                placeholder="Digite seu nome"
-                style={styles.input}/>
+            <Input name="Nome" placeholder="Digite seu nome"/>
+            <Input name="E-mail" placeholder="Digite seu e-mail"/>
+            <Input name="Password" placeholder="Digite sua senha"/>
+            <Input name="Confirm Password" placeholder="Confirme sua senha"/>
             </View>
 
-            <View style={styles.spaceinputs}> 
-                <Text style={styles.textinput}>E-mail</Text>
-                
-                <TextInput
-                placeholder="Digite seu e-mail"
-                style={styles.input}/>
-            </View>
+            <ClickText msg="Esqueceu a senha?"/>
 
-            <View style={styles.spaceinputs}> 
-                <Text style={styles.textinput}>Senha</Text>
-                
-                <TextInput
-                placeholder="Digite sua senha"
-                style={styles.input}/>
-            </View>
+            <View style={global.alignbuttonandtext}>
+            <Button text='REGISTRAR' destiny={ () => {
+                nav.navigate('home')
+            }}/>
 
-            <View style={styles.spaceinputs}> 
-                <Text style={styles.textinput}>Confirmacao Senha</Text>
-                
-                <TextInput
-                placeholder="Confirme sua senha"
-                style={styles.input}/>
+            <MsgAccount msg="Ja tem uma conta?" msg2="ENTRAR AGORA"/>
             </View>
             </View>
-
-            <View style={styles.organizeinputlogin}>
-            <TouchableOpacity style={styles.inputlogin}>
-                <Text style={styles.textlogin}>LOGAR</Text>
-            </TouchableOpacity>
-
-            <View style={styles.organizenoaccount}>
-                <Text style={styles.textnoaccount}>Ja tem uma conta?</Text>
-                <TouchableOpacity style={styles.textregisterorganize}>
-                    <Text style={styles.textregister}>Entrar Agora</Text>
-                </TouchableOpacity>
-            </View>
-            </View>
-        </View>
     )
 }
