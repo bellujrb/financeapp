@@ -4,8 +4,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Outset from "../../screens/auth/outset";
 import Login from "../../screens/auth/login";
 import Register from "../../screens/auth/register";
-import 'react-native-gesture-handler';
 import Home from "../../screens/home";
+import 'react-native-gesture-handler';
 
 export type RootStackParams = {
     outset: any;
