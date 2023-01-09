@@ -11,8 +11,22 @@ export default function Home(){
             <View style={styles.alignitens}>
 
             <View style={styles.containericons}>
-                <TouchableOpacity style={styles.cubeicon}/>
-                <TouchableOpacity style={styles.cubeicon}/>
+                <TouchableOpacity style={styles.cubeicon}>
+                        <Image
+                            source={require('../../../assets/icons/icon1.png')}
+                            style={{
+                                width: 18,
+                                height: 18,
+                        }}/>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.cubeicon}>
+                        <Image
+                            source={require('../../../assets/icons/notify.png')}
+                            style={{
+                                width: 17,
+                                height: 20,
+                        }}/>
+                </TouchableOpacity>
             </View>
             
             <View style={styles.organizetexts}>
@@ -80,7 +94,14 @@ export default function Home(){
 
                         backgroundColor: '#201937'
                     }}>
-
+                        <Image
+                            source={require('../../../assets/utils/money.png')}
+                            style={{
+                                width: 40,
+                                height: 60,
+                                bottom: 5,
+                                left: 5
+                        }}/>
                     </View>
 
                     <View style={{
@@ -177,10 +198,13 @@ export default function Home(){
                     width: 40,
                     borderRadius: 40,
 
-                    backgroundColor: '#201937'
+                    backgroundColor: '#201937',
+
+                    justifyContent: 'center',
+                    alignItems: 'center'
                 }}>
                     <Image
-                    source={require('../../../assets/utils/credicard.png')}
+                    source={require('../../../assets/utils/creditcard.png')}
                     style={{
                         width: 24,
                         height: 24
