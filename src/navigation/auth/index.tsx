@@ -8,10 +8,10 @@ import Home from "../../screens/home";
 import 'react-native-gesture-handler';
 
 export type RootStackParams = {
-    outset: any;
-    login: any;
-    register: any;
-    home: any;
+    outset: undefined;
+    login: undefined;
+    register: undefined;
+    home: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParams>();
