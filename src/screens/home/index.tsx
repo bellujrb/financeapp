@@ -14,18 +14,12 @@ export default function Home(){
                 <TouchableOpacity style={styles.cubeicon}>
                         <Image
                             source={require('../../../assets/icons/icon1.png')}
-                            style={{
-                                width: 18,
-                                height: 18,
-                        }}/>
+                            style={styles.iconheader1}/>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.cubeicon}>
                         <Image
                             source={require('../../../assets/icons/notify.png')}
-                            style={{
-                                width: 17,
-                                height: 20,
-                        }}/>
+                            style={styles.iconheader2}/>
                 </TouchableOpacity>
             </View>
             
@@ -42,127 +36,35 @@ export default function Home(){
             </TouchableOpacity>
             </View>
 
-            <View style={{
-                alignItems: 'center'
-            }}>
-                <LinearGradient colors={['#DCDCDC', '#5857CD']}style={{
-                    marginTop: 20,
-
-                    height: 137,
-                    width: 343.76,
-                    backgroundColor: '#5857CD',
-                    borderRadius: 20,
-
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                }}>
-                    <Text style={{
-                        fontFamily: 'Poppins',
-                        fontWeight: '500',
-                        fontSize: 16,
-                        letterSpacing: 0.5,
-
-                        color: '#201937',
-                        opacity: 0.7
-                    }}>Seu gasto</Text>
-                    <Text style={{
-                        fontFamily: 'Poppins',
-                        fontWeight: '500',
-                        fontSize: 32,
-                        letterSpacing: 0.5,
-
-                        color: '#201937',
-                    }}>R$ 132.99</Text>
+            <View style={styles.align}>
+                <LinearGradient colors={['#DCDCDC', '#5857CD']}style={styles.gradiantRectangle}>
+                    <Text style={styles.titlegradiant}>Seu gasto</Text>
+                    <Text style={styles.subtitlegradiant}>R$ 132.99</Text>
                 </LinearGradient>
                 
-                <View style={{
-                    marginTop: 30,
+                <View style={styles.infospent}>
 
-                    width: 343,
-                    height: 84,
-                    backgroundColor: '#322846',
-                    borderRadius: 15,
-                    justifyContent: 'space-evenly',
-                    alignItems: 'center',
-                    flexDirection: 'row'
-                }}>
-
-                    <View style={{
-                        width: 52,
-                        height: 52,
-                        borderRadius: 52,
-
-                        backgroundColor: '#201937'
-                    }}>
+                    <View style={styles.circlespent}>
                         <Image
                             source={require('../../../assets/utils/money.png')}
-                            style={{
-                                width: 40,
-                                height: 60,
-                                bottom: 5,
-                                left: 5
-                        }}/>
+                            style={styles.circlespentimg}/>
                     </View>
 
-                    <View style={{
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
-                        <Text style={{
-                            fontFamily: 'Poppins',
-                            fontWeight: '500',
-                            fontSize: 12,
-
-                            color: '#FFFFFF'
-                        }}>Gasto do Dia</Text>
-                        <Text style={{
-                            fontFamily: 'Poppins',
-                            fontWeight: '500',
-                            fontSize: 10,
-
-                            color: '#FFFFFF'
-                        }}>01/03/2023</Text>
+                    <View style={styles.align2}>
+                        <Text style={styles.titlespent}>Gasto do Dia</Text>
+                        <Text style={styles.subtitlespent}>01/03/2023</Text>
                     </View>
 
-                    <View style={{
-                        height: 40,
-                        width: 0,
-                        
-                        backgroundColor: '#4A3D65',
-                        borderWidth: 1,
-                        borderColor: '#4A3D65'
-                        
-                    }}/>
+                    <View style={styles.linespent}/>
 
-                    <View style={{
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
-                        <Text style={{
-                            fontFamily: 'Poppins',
-                            fontWeight: '500',
-                            fontSize: 18,
-
-                            color: '#FFFFFF'
-                        }}>R$ 132.99</Text>
+                    <View style={styles.align2}>
+                        <Text style={styles.titlespent2}>R$ 132.99</Text>
                         
                         <View style={{
                             flexDirection: 'row'
                         }}>
-                            <Text style={{
-                                fontFamily: 'Poppins',
-                                fontWeight: '500',
-                                fontSize: 10,
-    
-                                color: '#AFFEAD'
-                            }}>+4.3% x </Text>
-                            <Text style={{
-                                fontFamily: 'Poppins',
-                                fontWeight: '500',
-                                fontSize: 10,
-    
-                                color: '#FFFFFF'
-                            }}>semana passada</Text>
+                            <Text style={styles.subtitlespent2}>+4.3% x </Text>
+                            <Text style={styles.subtitlespent21}>semana passada</Text>
                         </View>
                     </View>
                 </View>
@@ -170,85 +72,25 @@ export default function Home(){
                 
             </View>
             
-            <Text style={{
-                    fontFamily: 'Poppins',
-                    fontWeight: '500',
-                    fontSize: 15,
+            <Text style={styles.titleexpense}>Despesas Recentes</Text>
 
-                    color: '#FFFFFF',
-                    padding: 20
-            }}>Despesas Recentes</Text>
-
-            <View style={{
-                justifyContent: 'center',
-                alignItems: 'center'
-            }}>
-            <View style={{
-                    width: 343,
-                    height: 84,
-                    backgroundColor: '#322846',
-                    borderRadius: 15,
-                    justifyContent: 'space-evenly',
-                    alignItems: 'center',
-                    flexDirection: 'row'
-            }}>
+            <View style={styles.align2}>
+            <View style={styles.rectangleexpenses}>
                 
-                <View style={{
-                    height: 40,
-                    width: 40,
-                    borderRadius: 40,
-
-                    backgroundColor: '#201937',
-
-                    justifyContent: 'center',
-                    alignItems: 'center'
-                }}>
+                <View style={styles.circleexpenses}>
                     <Image
                     source={require('../../../assets/utils/creditcard.png')}
-                    style={{
-                        width: 24,
-                        height: 24
-                    }}/>
+                    style={styles.circleexpensesimg}/>
                 </View>
 
-                <View style={{
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
-                        <Text style={{
-                            fontFamily: 'Poppins',
-                            fontWeight: '500',
-                            fontSize: 16,
-
-                            color: '#FFFFFF'
-                        }}>Netflix</Text>
-                        <Text style={{
-                            fontFamily: 'Poppins',
-                            fontWeight: '500',
-                            fontSize: 14,
-
-                            color: '#707070'
-                        }}>Assinatura</Text>
+                <View style={styles.align2}>
+                        <Text style={styles.rectangletitleexpenses}>Netflix</Text>
+                        <Text style={styles.rectanglesubtitleexpenses}>Assinatura</Text>
                 </View>
 
-                <View style={{
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
-                        <Text style={{
-                            fontFamily: 'Poppins',
-                            fontWeight: '500',
-                            fontSize: 16,
-
-                            color: '#FFFFFF'
-                        }}>R$ 29.00</Text>
-                        <Text style={{
-                            fontFamily: 'Poppins',
-                            fontWeight: '500',
-                            fontSize: 10,
-
-                            color: '#AFFEAD'
-                        }}>G. Moderado</Text>
+                <View style={styles.align2}>
+                        <Text style={styles.rectangletitleexpenses2}>R$ 29.00</Text>
+                        <Text style={styles.rectanglesubtitleexpenses2}>G. Moderado</Text>
                 </View>
             </View>
         </View> 
