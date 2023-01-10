@@ -186,9 +186,11 @@ export const styles = StyleSheet.create({
         color: '#FFFFFF'
     },
     titleexpense:{
+        marginLeft: 8,
+        padding: 20,
         fontFamily: 'Poppins',
         fontWeight: '500',
-        fontSize: 10,
+        fontSize: 16,
     
         color: '#FFFFFF'
     },
