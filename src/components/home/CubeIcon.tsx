@@ -8,6 +8,14 @@ interface Props {
 
 export function CubeIcon(props: Props){
 
+    let url: string;
+    url = props.url;
+
+    function require(url: string): undefined{
+        let icon = require(`${url}`);
+        return icon;
+    }
+
     return (
         <TouchableOpacity style={cubeicon.cubeicon}>
         <Image
