@@ -3,6 +3,7 @@ import { View, Text, Image} from "react-native";
 import { styles } from "../../styles/home/styles";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import LinearGradient from "react-native-linear-gradient";
+import { CubeIcon } from "../../components/home/CubeIcon";
 
 export default function Home(){
     return (
@@ -11,16 +12,8 @@ export default function Home(){
             <View style={styles.alignitens}>
 
             <View style={styles.containericons}>
-                <TouchableOpacity style={styles.cubeicon}>
-                        <Image
-                            source={require('../../../assets/icons/icon1.png')}
-                            style={styles.iconheader1}/>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.cubeicon}>
-                        <Image
-                            source={require('../../../assets/icons/notify.png')}
-                            style={styles.iconheader2}/>
-                </TouchableOpacity>
+                <CubeIcon url='../../../assets/icons/icon1.png'/>
+                <CubeIcon url='../../../assets/icons/notify.png'/>
             </View>
             
             <View style={styles.organizetexts}>

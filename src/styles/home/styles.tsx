@@ -1,5 +1,25 @@
 import { StyleSheet } from "react-native";
 
+export const cubeicon = StyleSheet.create({
+    cubeicon:{
+        margin: 10,
+
+        width: 40,
+        height: 40,
+
+        borderRadius: 12,
+        borderWidth: 1,
+        borderColor: '#D0D0D0',
+
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    iconheader:{
+        width: 18,
+        height: 18
+    },
+})
+
 export const styles = StyleSheet.create({
     container:{
         flex: 1,
@@ -16,27 +36,6 @@ export const styles = StyleSheet.create({
     containericons:{
         flexDirection: 'row',
         padding: 20
-    },
-    cubeicon:{
-        margin: 10,
-
-        width: 40,
-        height: 40,
-
-        borderRadius: 12,
-        borderWidth: 1,
-        borderColor: '#D0D0D0',
-
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    iconheader1:{
-        width: 18,
-        height: 18
-    },
-    iconheader2:{
-        width: 17,
-        height: 20
     },
     organizetexts:{
         marginLeft: 30,
