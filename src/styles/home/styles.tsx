@@ -20,42 +20,7 @@ export const cubeicon = StyleSheet.create({
     },
 })
 
-export const styles = StyleSheet.create({
-    container:{
-        flex: 1,
-        backgroundColor: '#201937',
-    },
-    containerheader:{
-        flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        alignItems: 'center'
-    },
-    alignitens:{
-        flexDirection: 'column'
-    },
-    containericons:{
-        flexDirection: 'row',
-        padding: 20
-    },
-    organizetexts:{
-        marginLeft: 30,
-    },
-    title:{
-        fontFamily: 'Poppins',
-        fontWeight: '700',
-        fontSize: 18,
-        letterSpacing: 0.5,
-
-        color: '#FFFFFF'
-    },
-    subtitle:{
-        fontFamily: 'Poppins',
-        fontWeight: '500',
-        fontSize: 14,
-
-        letterSpacing: 0.5,
-        color: '#746996'
-    },
+export const status = StyleSheet.create({
     rectanglestate:{
         width: 120,
         height: 67,
@@ -82,9 +47,9 @@ export const styles = StyleSheet.create({
 
         color: '#AFFEAD'
     },
-    align:{
-        alignItems: 'center'
-    },
+})
+
+export const info = StyleSheet.create({
     gradiantRectangle:{
         marginTop: 20,
 
@@ -113,6 +78,9 @@ export const styles = StyleSheet.create({
 
         color: '#201937',
     },
+})
+
+export const week = StyleSheet.create({
     infospent:{
         marginTop: 30,
 
@@ -136,10 +104,6 @@ export const styles = StyleSheet.create({
         height: 60,
         bottom: 5,
         left: 5
-    },
-    align2:{
-        justifyContent: 'center',
-        alignItems: 'center'
     },
     titlespent:{
         fontFamily: 'Poppins',
@@ -184,15 +148,9 @@ export const styles = StyleSheet.create({
     
         color: '#FFFFFF'
     },
-    titleexpense:{
-        marginLeft: 8,
-        padding: 20,
-        fontFamily: 'Poppins',
-        fontWeight: '500',
-        fontSize: 16,
-    
-        color: '#FFFFFF'
-    },
+})
+
+export const expense = StyleSheet.create({
     rectangleexpenses:{
         width: 343,
         height: 84,
@@ -243,5 +201,62 @@ export const styles = StyleSheet.create({
         fontSize: 16,
 
         color: '#FFFFFF'
+    }
+})
+
+export const global = StyleSheet.create({
+    container:{
+        flex: 1,
+        backgroundColor: '#201937',
+    },
+    containerheader:{
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        alignItems: 'center'
+    },
+    alignitens:{
+        flexDirection: 'column'
+    },
+    containericons:{
+        flexDirection: 'row',
+        padding: 20
+    },
+    organizetexts:{
+        marginLeft: 30,
+    },
+    title:{
+        fontFamily: 'Poppins',
+        fontWeight: '700',
+        fontSize: 18,
+        letterSpacing: 0.5,
+
+        color: '#FFFFFF'
+    },
+    subtitle:{
+        fontFamily: 'Poppins',
+        fontWeight: '500',
+        fontSize: 14,
+
+        letterSpacing: 0.5,
+        color: '#746996'
+    },
+    align:{
+        alignItems: 'center'
+    },
+    align2:{
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    titleexpense:{
+        marginLeft: 8,
+        padding: 20,
+        fontFamily: 'Poppins',
+        fontWeight: '500',
+        fontSize: 16,
+    
+        color: '#FFFFFF'
+    },
+    align3:{
+        margin: 10
     }
 })
