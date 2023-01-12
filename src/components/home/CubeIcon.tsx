@@ -3,23 +3,15 @@ import { TouchableOpacity, Image } from "react-native";
 import { cubeicon } from "../../styles/home/styles";
 
 interface Props {
-    url: string;
+    img: any;
 }
 
 export function CubeIcon(props: Props){
 
-    let url: string;
-    url = props.url;
-
-    function require(url: string): undefined{
-        let icon = require(`${url}`);
-        return icon;
-    }
-
     return (
         <TouchableOpacity style={cubeicon.cubeicon}>
         <Image
-                source={require(props.url)}
+                source={props.img}
                 style={cubeicon.iconheader}/>
         </TouchableOpacity>
     )

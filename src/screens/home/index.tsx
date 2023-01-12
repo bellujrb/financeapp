@@ -5,6 +5,9 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import LinearGradient from "react-native-linear-gradient";
 import { CubeIcon } from "../../components/home/CubeIcon";
 
+import icon1 from '../../../assets/icons/icon1.png'
+import notify from '../../../assets/icons/notify.png'
+
 export default function Home(){
     return (
         <View style={styles.container}>
@@ -12,8 +15,8 @@ export default function Home(){
             <View style={styles.alignitens}>
 
             <View style={styles.containericons}>
-                <CubeIcon url='../../../assets/icons/icon1.png'/>
-                <CubeIcon url='../../../assets/icons/notify.png'/>
+                <CubeIcon img={icon1}/>
+                <CubeIcon img={notify}/>
             </View>
             
             <View style={styles.organizetexts}>
