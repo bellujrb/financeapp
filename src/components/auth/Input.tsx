@@ -5,6 +5,8 @@ import { input } from "../../styles/auth/styles";
 interface Props {
     name: string;
     placeholder: string;
+    value?: string;
+    data?: any
 }
 
 export function Input(props: Props){
@@ -16,7 +18,9 @@ export function Input(props: Props){
                 
                 <TextInput
                 placeholder={props.placeholder}
-                style={input.input}/>
+                style={input.input}
+                value={props.value}
+                onChangeText={value => props.data(value)}/>
             </View>
         </View>
     )

@@ -14,6 +14,8 @@ export default function Register(){
 
     const nav = useNavigation<StackNavigationProp<RootStackParams>>()
 
+    let unknown = ''
+
     return (
         <View style={global.container}>
 
