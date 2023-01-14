@@ -5,7 +5,7 @@ import { input } from "../../styles/auth/styles";
 interface Props {
     name: string;
     placeholder: string;
-    value?: string;
+    value?: any;
     data?: any
 }
 

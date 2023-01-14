@@ -19,8 +19,8 @@ export default function Login(){
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
 
-    async function CreateAccount() {
-        await firebase.auth().createUserWithEmailAndPassword(email, password)
+    async function LoginAccount() {
+        await firebase.auth().signInWithEmailAndPassword(email, password)
         .then( (value:number) => {
             console.log(value);
         nav.navigate('home');
@@ -44,7 +44,7 @@ export default function Login(){
 
             <View style={global.alignbuttonandtext}>
             <Button text='LOGAR' destiny={ () => {
-                CreateAccount();
+                LoginAccount();
             }}/>
 
             <MsgAccount msg="Não tem uma conta?" msg2="REGISTRAR AGORA"/>
