@@ -6,6 +6,7 @@ import Login from "../../screens/auth/login";
 import Register from "../../screens/auth/register";
 import Home from "../../screens/home";
 import 'react-native-gesture-handler';
+import { AppProvider } from "../../services/context/context";
 
 export type RootStackParams = {
     outset: undefined;
@@ -19,6 +20,7 @@ const Stack = createStackNavigator<RootStackParams>();
 export default function AuthScreens(){
 
     return (
+        <AppProvider>
         <NavigationContainer>
             <Stack.Navigator initialRouteName="outset">
 
@@ -53,5 +55,6 @@ export default function AuthScreens(){
                 }}/>
         </Stack.Navigator>
     </NavigationContainer>
+    </AppProvider>
     )
 }

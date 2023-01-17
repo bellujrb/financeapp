@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState} from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../navigation/auth";
@@ -11,16 +11,20 @@ import { MsgAccount } from "../../../components/auth/MsgAccount";
 import { global } from "../../../styles/auth/styles";
 
 import firebase  from '../../../services/database/firebase'
+import { AppContext } from "../../../services/context/context";
 
 export default function Login(){
 
     const nav = useNavigation<StackNavigationProp<RootStackParams>>()
 
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('');
+    const context = useContext(AppContext)
+
+    useEffect(() => {
+
+    }, [context])
 
     async function LoginAccount() {
-        await firebase.auth().signInWithEmailAndPassword(email, password)
+        await firebase.auth().signInWithEmailAndPassword(context?.email, context?.password)
         .then( (value:number) => {
             console.log(value);
         nav.navigate('home');
@@ -32,12 +36,11 @@ export default function Login(){
 
     return (
         <View style={global.container}>
-
             <Header name="Login"/>
             <View style={global.aligninputs}>
 
-            <Input name="E-mail" placeholder="Digite seu e-mail" value={email} data={setEmail}/>
-            <Input name="Password" placeholder="Digite sua senha" value={password} data={setPassword}/>
+            <Input name="E-mail" placeholder="Digite seu e-mail" value={context?.email} data={context?.setEmail}/>
+            <Input name="Password" placeholder="Digite sua senha" value={context?.password} data={context?.setPassword}/>
             </View>
 
             <ClickText msg="Esqueceu a senha?"/>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactComponentElement } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { button } from "../../styles/auth/styles";
 
