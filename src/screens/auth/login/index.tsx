@@ -40,7 +40,7 @@ export default function Login(){
             <View style={global.aligninputs}>
 
             <Input name="E-mail" placeholder="Digite seu e-mail" value={context?.email} data={context?.setEmail}/>
-            <Input name="Password" placeholder="Digite sua senha" value={context?.password} data={context?.setPassword}/>
+            <Input name="Password" placeholder="Digite sua senha" value={context?.password} data={context?.setPassword} secure={true}/>
             </View>
 
             <ClickText msg="Esqueceu a senha?"/>

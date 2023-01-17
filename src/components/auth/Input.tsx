@@ -6,7 +6,8 @@ interface Props {
     name: string;
     placeholder: string;
     value?: any;
-    data?: any
+    data?: any;
+    secure?: boolean;
 }
 
 export function Input(props: Props){
@@ -20,7 +21,8 @@ export function Input(props: Props){
                 placeholder={props.placeholder}
                 style={input.input}
                 value={props.value}
-                onChangeText={value => props.data(value)}/>
+                onChangeText={value => props.data(value)}
+                secureTextEntry={props.secure}/>
             </View>
         </View>
     )

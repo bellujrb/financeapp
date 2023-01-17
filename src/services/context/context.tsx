@@ -11,18 +11,6 @@ interface AppContext {
     setPassword: React.Dispatch<React.SetStateAction<string>>
 }
 
-const context: AppContext = {
-    email: '',
-    password: '',
-
-    setEmail: function (value: React.SetStateAction<string>): void {
-        throw new Error('Function not implemented.');
-    },
-    setPassword: function (value: React.SetStateAction<string>): void {
-        throw new Error('Function not implemented.');
-    }
-}
-
 export const AppContext = createContext<AppContext | null>(null)
 
 export const AppProvider = ({ children }: Props) => {
