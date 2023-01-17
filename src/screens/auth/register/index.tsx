@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState} from "react";
+import React, { useContext, useEffect } from "react";
 import { View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
@@ -14,13 +14,13 @@ import { AppContext } from "../../../services/context/context";
 
 export default function Register(){
 
+    const nav = useNavigation<StackNavigationProp<RootStackParams>>()
+
     const context = useContext(AppContext)
 
     useEffect(() => {
 
     }, [context])
-
-    const nav = useNavigation<StackNavigationProp<RootStackParams>>()
 
     async function CreateAccount() {
         await firebase.auth().createUserWithEmailAndPassword(context?.email, context?.password)
@@ -52,7 +52,9 @@ export default function Register(){
                 CreateAccount();
             }}/>
 
-            <MsgAccount msg="Ja tem uma conta?" msg2="ENTRAR AGORA"/>
+            <MsgAccount msg="Ja tem uma conta?" msg2="ENTRAR AGORA" destiny={ () => {
+                nav.navigate('login');
+            }}/>
             </View>
             </View>
     )

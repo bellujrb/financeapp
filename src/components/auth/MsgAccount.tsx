@@ -5,6 +5,7 @@ import { msgacc } from "../../styles/auth/styles";
 interface Props {
     msg: string;
     msg2: string;
+    destiny: any;
 }
 
 export function MsgAccount(props: Props){
@@ -13,7 +14,7 @@ export function MsgAccount(props: Props){
         <View>
             <View style={msgacc.organizenoaccount}>
                 <Text style={msgacc.textnoaccount}>{props.msg}</Text>
-                <TouchableOpacity style={msgacc.textregisterorganize}>
+                <TouchableOpacity style={msgacc.textregisterorganize} onPress={props.destiny}>
                     <Text style={msgacc.textregister}>{props.msg2}</Text>
                 </TouchableOpacity>
             </View>

@@ -27,7 +27,7 @@ export default function Login(){
         await firebase.auth().signInWithEmailAndPassword(context?.email, context?.password)
         .then( (value:number) => {
             console.log(value);
-        nav.navigate('home');
+            nav.navigate('home');
         })
         .catch( (err:string) => {
             console.log(err)
@@ -50,7 +50,9 @@ export default function Login(){
                 LoginAccount();
             }}/>
 
-            <MsgAccount msg="Não tem uma conta?" msg2="REGISTRAR AGORA"/>
+            <MsgAccount msg="Não tem uma conta?" msg2="REGISTRAR AGORA" destiny={ () => {
+                nav.navigate('register');
+            }}/>
             </View>
             </View>
     )

@@ -1,11 +1,11 @@
-import React, { useContext, useState } from "react";
+import 'react-native-gesture-handler';
+import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Outset from "../../screens/auth/outset";
 import Login from "../../screens/auth/login";
 import Register from "../../screens/auth/register";
 import Home from "../../screens/home";
-import 'react-native-gesture-handler';
 import { AppProvider } from "../../services/context/context";
 
 export type RootStackParams = {

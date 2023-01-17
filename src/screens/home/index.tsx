@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { View, Text, Image} from "react-native";
 import { global } from "../../styles/home/styles";
 import { CubeIcon } from "../../components/home/CubeIcon";
@@ -9,8 +9,16 @@ import { Status } from "../../components/home/Status";
 import { Info } from "../../components/home/Info";
 import { InfoWeek } from "../../components/home/InfoWeek";
 import { Expense } from "../../components/home/Expense";
+import { AppContext } from "../../services/context/context";
 
 export default function Home(){
+
+    const context = useContext(AppContext);
+    
+    useEffect(() => {
+
+    }, [context])
+    
 
     return (
         <View style={global.container}>
@@ -24,7 +32,7 @@ export default function Home(){
             
             <View style={global.organizetexts}>
                 <Text style={global.title}>Seja bem-vindo </Text>
-                <Text style={global.subtitle}>Belluzzo</Text>
+                <Text style={global.subtitle}>{context?.name}</Text>
             </View>
 
             </View>

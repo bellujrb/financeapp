@@ -3,14 +3,13 @@ import 'firebase/database';
 import 'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAxWyNJy-JwA6e5bdl7HNgS5IzqXhyFqR4",
-    authDomain: "todoapp-4623d.firebaseapp.com",
-    databaseURL: "https://todoapp-4623d-default-rtdb.firebaseio.com",
-    projectId: "todoapp-4623d",
-    storageBucket: "todoapp-4623d.appspot.com",
-    messagingSenderId: "934434059991",
-    appId: "1:934434059991:web:10c0586d9009ef37a76292",
-    measurementId: "G-R3W615G1XY"
+    apiKey: "AIzaSyDe2DhFGylSuOW-xGjAbfQHLEk_kJh64-A",
+    authDomain: "finance-app-7886a.firebaseapp.com",
+    projectId: "finance-app-7886a",
+    storageBucket: "finance-app-7886a.appspot.com",
+    messagingSenderId: "709184908376",
+    appId: "1:709184908376:web:082e897524f573063bae2d",
+    measurementId: "G-YK31PBT9PX"
 };
 
 if(!firebase.apps.length){
