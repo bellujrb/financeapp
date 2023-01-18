@@ -2,21 +2,20 @@ import { StyleSheet } from "react-native";
 
 export const cubeicon = StyleSheet.create({
     cubeicon:{
-        margin: 10,
+        margin: 5,
+        backgroundColor: '#FFFFFF',
+        width: 120,
+        height: 90,
 
-        width: 40,
-        height: 40,
-
-        borderRadius: 12,
-        borderWidth: 1,
-        borderColor: '#D0D0D0',
-
+        borderRadius: 10,
+        bottom: 40,
+        alignItems: 'center',
         justifyContent: 'center',
-        alignItems: 'center'
     },
-    iconheader:{
-        width: 18,
-        height: 18
+    icon:{
+        width: 45.52,
+        height: 47.99,
+        bottom: 5,
     },
 })
 
@@ -207,15 +206,11 @@ export const expense = StyleSheet.create({
 export const global = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#201937',
-    },
-    containerheader:{
-        flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        alignItems: 'center'
+        backgroundColor: '#F5F6FA',
     },
     alignitens:{
-        flexDirection: 'column'
+        marginLeft: 10, 
+        flexDirection: 'row-reverse'
     },
     containericons:{
         flexDirection: 'row',

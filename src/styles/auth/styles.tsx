@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const global = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#201937',
+        backgroundColor: '#F5F6FA',
     },
     aligninputs:{
         alignItems: 'center'
@@ -23,7 +23,7 @@ export const header = StyleSheet.create({
         fontSize: 32,
 
         letterSpacing: 0.03,
-        color: '#FFFFFF'
+        color: '#000000'
     },
 })
 
@@ -38,7 +38,7 @@ export const input = StyleSheet.create({
         fontSize: 12,
 
         letterSpacing: 0.03,
-        color: '#FFFFFF',
+        color: '#3D3D3D',
 
         marginBottom: 5,
         marginLeft: 2
@@ -48,13 +48,14 @@ export const input = StyleSheet.create({
         height: 50,
         backgroundColor: '#FFFFFF',
         borderRadius: 15,
+        borderColor: '#DFE2E5',
+        borderWidth: 1,
 
         fontFamily: 'Poppins',
         fontWeight: '400',
         fontSize: 14,
 
-        color: '#AAACAE',
-        padding: 10
+        padding: 10,
     },
 })
 
@@ -69,7 +70,7 @@ export const ctext = StyleSheet.create({
         fontSize: 14,
 
         letterSpacing: 0.3,
-        color: '#FFFFFF'
+        color: '#000000'
     },
 })
 
@@ -82,7 +83,7 @@ export const button = StyleSheet.create({
         width: 300,
         height: 54,
 
-        backgroundColor: '#5857CD',
+        backgroundColor: '#FFC965',
         borderRadius: 60,
                 
         justifyContent: 'center',
@@ -118,14 +119,14 @@ export const msgacc = StyleSheet.create({
         fontWeight: '600',
         fontSize: 16,
 
-        color: '#FFFFFF'
+        color: '#FFC965'
     }
 })
 
 export const outset = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#201937',
+        backgroundColor: '#FFFFFF',
         justifyContent: 'space-evenly',
         alignItems: 'center',
     },
@@ -139,7 +140,7 @@ export const outset = StyleSheet.create({
         fontSize: 52,
 
         letterSpacing: 0.5,
-        color: '#FFFFFF'
+        color: '#000000'
     },
     subtitle:{
         fontFamily: 'Poppins',
@@ -147,7 +148,7 @@ export const outset = StyleSheet.create({
         fontSize: 18,
 
         letterSpacing: 0.5,
-        color: '#FFFFFF'
+        color: '#828282'
     },
     button:{
         marginTop: 40,
@@ -156,7 +157,7 @@ export const outset = StyleSheet.create({
         height: 94,
         borderRadius: 94,
 
-        backgroundColor: '#322846',
+        backgroundColor: '#222222',
 
         justifyContent: 'center',
         alignItems: 'center'
