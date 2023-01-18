@@ -14,12 +14,7 @@ export function CubeIcon(props: Props){
             <Image
             source={props.img}
             style={cubeicon.icon}/>
-            <Text style={{
-                fontFamily: 'Poppins',
-                fontWeight: '400',
-                fontSize: 12,
-                color: '#787A84'
-            }}>{props.name}</Text>
+            <Text style={cubeicon.title}>{props.name}</Text>
         </TouchableOpacity>
     )
 }

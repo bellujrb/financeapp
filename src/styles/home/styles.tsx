@@ -17,6 +17,12 @@ export const cubeicon = StyleSheet.create({
         height: 47.99,
         bottom: 5,
     },
+    title:{
+        fontFamily: 'Poppins',
+        fontWeight: '400',
+        fontSize: 12,
+        color: '#787A84'
+    }
 })
 
 export const info = StyleSheet.create({
