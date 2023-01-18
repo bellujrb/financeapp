@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { View, Text, Image} from "react-native";
+import { View, Text, Image, TouchableOpacity} from "react-native";
 import { global } from "../../styles/home/styles";
 import { CubeIcon } from "../../components/home/CubeIcon";
 import { Header } from "../../components/home/Header";
@@ -7,6 +7,8 @@ import { AppContext } from "../../services/context/context";
 
 import add from '../../assets/utils/add.png';
 import viewd from '../../assets/utils/viewd.png';
+import { Info } from "../../components/home/Info";
+import { Expense } from "../../components/home/Expense";
 
 export default function Home(){
 
@@ -25,6 +27,10 @@ export default function Home(){
                 <CubeIcon name="Ver Despesas" img={add}/>
                 <CubeIcon name="Adicionar Despesa" img={viewd}/>
             </View>
+
+            <Info/>
+                
+            <Expense/>
 
         </View>
     )

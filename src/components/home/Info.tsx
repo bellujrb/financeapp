@@ -1,18 +1,13 @@
 import React from 'react';
-import { Text } from 'react-native';
-import LinearGradient from "react-native-linear-gradient";
+import { View, Text } from 'react-native';
 import { info } from '../../styles/home/styles';
 
-interface Props {
-    spent: number;
-}
-
-export function Info(props: Props){
+export function Info(){
     
     return (
-        <LinearGradient colors={['#DCDCDC', '#5857CD']}style={info.gradiantRectangle}>
-            <Text style={info.titlegradiant}>Seu gasto</Text>
-            <Text style={info.subtitlegradiant}>{props.spent}.00</Text>
-        </LinearGradient>
+        <View style={info.organize}>
+            <Text style={info.title}>Sua vida financeira em um app</Text>
+            <Text style={info.subtitle}>Organizar sua vida financeira nunca foi tão fácil!</Text>
+        </View>
     )
 }
