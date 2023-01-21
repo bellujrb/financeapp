@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState} from "react";
-import { View, Text } from "react-native";
+import React, { useContext, useEffect } from "react";
+import { View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../navigation/auth";
@@ -8,10 +8,10 @@ import { Input } from "../../../components/auth/Input";
 import { ClickText } from "../../../components/auth/ClickText";
 import { Button } from "../../../components/auth/Button";
 import { MsgAccount } from "../../../components/auth/MsgAccount";
+import { AppContext } from "../../../services/context/context";
 import { global } from "../../../styles/auth/styles";
 
 import firebase  from '../../../services/database/firebase'
-import { AppContext } from "../../../services/context/context";
 
 export default function Login(){
 
