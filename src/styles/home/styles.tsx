@@ -137,6 +137,50 @@ export const buy = StyleSheet.create({
     }
 })
 
+export const tips = StyleSheet.create({
+    rectangle:{
+        marginTop: 30,
+
+        width: '100%',
+        height: '20%',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#FFFFFF'
+    },
+    borderrectangle:{
+        width: 329,
+        height: 122,
+        borderColor: '#F1F3FC',
+        borderWidth: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    img:{
+        width: 225.06,
+        height: 153.72,
+        left: 60,
+        bottom: 16
+    },
+    title:{
+        fontFamily: 'Poppins',
+        fontWeight: '700',
+        fontSize: 13,
+
+        color: '#000000'
+    },
+    subtitle:{
+        marginTop: 10,
+        width: '60%',
+
+        fontFamily: 'Poppins',
+        fontWeight: '400',
+        fontSize: 13,
+
+        color: '#787A84'
+    }
+})
+
 export const global = StyleSheet.create({
     container:{
         flex: 1,
