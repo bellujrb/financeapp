@@ -1,5 +1,53 @@
 import { StyleSheet } from "react-native";
 
+export const header = StyleSheet.create({
+    organize:{
+        width: '100%',
+        height: '18%',
+        backgroundColor: '#FFC965'
+    },
+    align:{
+        padding: 20,
+        width: '60%'
+    },
+    title:{
+        marginTop: 10,
+        fontFamily: 'Poppins',
+        fontWeight: '500',
+        fontSize: 14,
+
+        color: '#FFFFFF'
+    },
+    subtitle:{
+        marginTop: 10,
+
+        fontFamily: 'Poppins',
+        fontWeight: '500',
+        fontSize: 14,
+
+        color: '#FFFFFF'
+    },
+    organize2:{
+        marginTop: 15,
+
+        flexDirection: 'row',
+        width: '25%',
+        justifyContent: 'space-between'
+    },
+    line:{
+        width: 20,
+        height: 1,
+
+        backgroundColor: '#FFFFFF',
+    },
+    lineopacity:{
+        width: 20,
+        height: 1,
+        opacity: 0.5,
+        backgroundColor: '#FFFFFF'
+    }
+})
+
 export const cubeicon = StyleSheet.create({
     cubeicon:{
         margin: 5,
