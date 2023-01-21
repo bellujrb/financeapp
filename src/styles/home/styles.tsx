@@ -113,6 +113,30 @@ export const expense = StyleSheet.create({
     }
 })
 
+export const buy = StyleSheet.create({
+    align:{
+        marginTop: 20,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    rectangle:{
+        width: 335,
+        height: 37.92,
+        backgroundColor: 'white',
+        borderRadius: 15,
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        flexDirection: 'row'
+    },
+    text:{
+        fontFamily: 'Poppins',
+        fontWeight: '700',
+        fontSize: 12,
+
+        color: '#45661'
+    }
+})
+
 export const global = StyleSheet.create({
     container:{
         flex: 1,

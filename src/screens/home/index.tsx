@@ -9,6 +9,8 @@ import add from '../../assets/utils/add.png';
 import viewd from '../../assets/utils/viewd.png';
 import { Info } from "../../components/home/Info";
 import { Expense } from "../../components/home/Expense";
+import { BuyDate } from "../../components/home/BuyDate";
+import { TipsFinance } from "../../components/home/TipsFinance";
 
 export default function Home(){
 
@@ -31,6 +33,9 @@ export default function Home(){
             <Info/>
                 
             <Expense/>
+
+            <BuyDate numberBuy={25}/>
+            <TipsFinance/>
 
         </View>
     )
