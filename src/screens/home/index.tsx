@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { View, Text, Image, TouchableOpacity} from "react-native";
+import { View } from "react-native";
 import { global } from "../../styles/home/styles";
 import { CubeIcon } from "../../components/home/CubeIcon";
 import { Header } from "../../components/home/Header";
@@ -24,19 +24,14 @@ export default function Home(){
     return (
         <View style={global.container}>
             <Header/>
-            
             <View style={global.alignitens}>
                 <CubeIcon name="Ver Despesas" img={add}/>
                 <CubeIcon name="Adicionar Despesa" img={viewd}/>
             </View>
-
             <Info/>
-                
             <Expense/>
-
             <BuyDate numberBuy={25}/>
             <TipsFinance/>
-
         </View>
     )
 }
