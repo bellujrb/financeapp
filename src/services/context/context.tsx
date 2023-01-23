@@ -8,9 +8,11 @@ interface AppContext {
     name: string
     email: string;
     password: string;
+    id: string;
     setName: React.Dispatch<React.SetStateAction<string>>
     setEmail: React.Dispatch<React.SetStateAction<string>>
     setPassword: React.Dispatch<React.SetStateAction<string>>
+    setId: React.Dispatch<React.SetStateAction<string>>
 }
 
 export const AppContext = createContext<AppContext | null>(null)
@@ -20,6 +22,7 @@ export const AppProvider = ({ children }: Props) => {
     const [name, setName] = useState('Belluzzo')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
+    const [id, setId] = useState('')
 
     return (
         <AppContext.Provider value={{ 
@@ -28,7 +31,9 @@ export const AppProvider = ({ children }: Props) => {
             email, 
             setEmail, 
             password, 
-            setPassword }}>
+            setPassword,
+            id,
+            setId }}>
                 
             {children}
         </AppContext.Provider>

@@ -24,12 +24,26 @@ export default function Register(){
 
     async function CreateAccount() {
         await firebase.auth().createUserWithEmailAndPassword(context?.email, context?.password)
-        .then( (value:number) => {
-            console.log(value);
-        nav.navigate('home');
+        .then( (value:any) => {
+            firebase.database().ref('users').child(value.user.uid).set({
+                name: context?.name,
+                email: context?.email,
+            })
+            console.log(" Usuario Criado " + value.user.email + value.user.uid)
+            context?.setId(value.user.uid);
+            nav.navigate('home')
         })
-        .catch( (err:string) => {
-            console.log(err)
+        .catch( (err:any) => {
+            if (err.code === 'auth/weak-password'){
+                console.log('Sua senha deve ter pelo menos 6 caracteres')
+            } 
+            if (err.code === 'auth/invalid-email'){
+                console.log('Email incorreto')
+            }
+            else {
+                console.log(`Algo deu errado, consulte o desenvolvedor do projeto ERROR: ${err}`);
+                return;
+            }
         })
     }
 
@@ -39,7 +53,7 @@ export default function Register(){
             <Header name="Register"/>
             <View style={global.aligninputs}>
 
-            <Input name="Nome" placeholder="Digite seu nome"/>
+            <Input name="Nome" placeholder="Digite seu nome" value={context?.name} data={context?.setName}/>
             <Input name="E-mail" placeholder="Digite seu e-mail" value={context?.email} data={context?.setEmail}/>
             <Input name="Password" placeholder="Digite sua senha" value={context?.password} data={context?.setPassword} secure={true}/>
             <Input name="Confirm Password" placeholder="Confirme sua senha" value={context?.password} secure={true}/>
