@@ -16,7 +16,7 @@ export default function Register(){
 
     interface FirebaseAuth {
         user: {
-            uid: any,
+            uid: number | any,
             email: string,
         },
     }
@@ -30,26 +30,30 @@ export default function Register(){
     }, [context])
 
     async function CreateAccount() {
-        await firebase.auth().createUserWithEmailAndPassword(context?.email, context?.password)
-        .then( (value: FirebaseAuth) => {
+        try {
+            const value: FirebaseAuth = await firebase
+                .auth()
+                .createUserWithEmailAndPassword(context?.email, context?.password)
             firebase.database().ref('users').child(value.user.uid).set({
                 name: context?.name,
-                email: context?.email,
+                email: context?.email
             })
-            console.log(" Usuario Criado " + value.user.email + value.user.uid)
-            context?.setId(value.user.uid);
-            nav.navigate('home')
-        })
-        .catch( (err: { code: number }) => {
+                console.log(' Usuario Criado ' + value.user.email + value.user.uid)
+                context?.setId(value.user.uid)
+                nav.navigate('home')
+        } catch (err: any) {
             const errors: Record<string, () => void> = {
-                'auth/weak-password': () => console.log("Sua senha deve ter pelo menos 6 caracteres"),
-                'auth/invalid-email': () => console.log('Email incorreto'),
+                'auth/weak-password': () =>
+                console.log('Sua senha deve ter pelo menos 6 caracteres'),
+                'auth/invalid-email': () => console.log('Email incorreto')
             }
-            !errors[err.code] && console.log(`Algo deu errado, consulte o desenvolvedor do projeto ERROR: ${err}`);
-            errors[err.code]();
+            !errors[err.code] &&
+            console.log(
+                `Algo deu errado, consulte o desenvolvedor do projeto ERROR: ${err}`
+            )
+            errors[err.code]()
         }
-        )
-    }
+        }
 
     return (
         <View style={global.container}>
