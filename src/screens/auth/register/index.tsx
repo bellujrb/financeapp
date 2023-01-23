@@ -14,6 +14,13 @@ import { AppContext } from "../../../services/context/context";
 
 export default function Register(){
 
+    interface FirebaseAuth {
+        user: {
+            uid: any,
+            email: string,
+        },
+    }
+
     const nav = useNavigation<StackNavigationProp<RootStackParams>>()
 
     const context = useContext(AppContext)
@@ -24,7 +31,7 @@ export default function Register(){
 
     async function CreateAccount() {
         await firebase.auth().createUserWithEmailAndPassword(context?.email, context?.password)
-        .then( (value:any) => {
+        .then( (value: FirebaseAuth) => {
             firebase.database().ref('users').child(value.user.uid).set({
                 name: context?.name,
                 email: context?.email,
@@ -33,18 +40,15 @@ export default function Register(){
             context?.setId(value.user.uid);
             nav.navigate('home')
         })
-        .catch( (err:any) => {
-            if (err.code === 'auth/weak-password'){
-                console.log('Sua senha deve ter pelo menos 6 caracteres')
-            } 
-            if (err.code === 'auth/invalid-email'){
-                console.log('Email incorreto')
+        .catch( (err: { code: number }) => {
+            const errors: Record<string, () => void> = {
+                'auth/weak-password': () => console.log("Sua senha deve ter pelo menos 6 caracteres"),
+                'auth/invalid-email': () => console.log('Email incorreto'),
             }
-            else {
-                console.log(`Algo deu errado, consulte o desenvolvedor do projeto ERROR: ${err}`);
-                return;
-            }
-        })
+            !errors[err.code] && console.log(`Algo deu errado, consulte o desenvolvedor do projeto ERROR: ${err}`);
+            errors[err.code]();
+        }
+        )
     }
 
     return (
