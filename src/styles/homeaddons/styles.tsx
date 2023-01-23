@@ -31,7 +31,8 @@ export const tip = StyleSheet.create({
         left: 22
     },
     align2:{
-        width: '45%'
+        flexDirection: 'column',
+        width: '45%',
     },
     title:{
         fontFamily: 'Poppins',

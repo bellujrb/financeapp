@@ -4,6 +4,7 @@ import { tip } from "../../styles/homeaddons/styles";
 
 export function Tip(){
 
+
     return (
         <View style={tip.align}>
 
@@ -13,7 +14,7 @@ export function Tip(){
                 style={tip.img}
                 />
 
-                <View style={tip.align}>
+                <View style={tip.align2}>
                     <Text style={tip.title}>Adicione sua despesa</Text>
                     <Text style={tip.subtitle}>De Forma Simples! Basta Seguir Abaixo</Text>
                 </View>
