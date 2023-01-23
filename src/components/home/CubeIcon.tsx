@@ -4,13 +4,14 @@ import { cubeicon } from "../../styles/home/styles";
 
 interface Props {
     name: string,
-    img: undefined
+    img: undefined,
+    destiny: any;
 }
 
 export function CubeIcon(props: Props){
 
     return (
-        <TouchableOpacity style={cubeicon.cubeicon}>
+        <TouchableOpacity style={cubeicon.cubeicon} onPress={props.destiny}>
             <Image
             source={props.img}
             style={cubeicon.icon}/>

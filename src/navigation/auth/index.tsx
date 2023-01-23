@@ -7,12 +7,14 @@ import Login from "../../screens/auth/login";
 import Register from "../../screens/auth/register";
 import Home from "../../screens/home";
 import { AppProvider } from "../../services/context/context";
+import ExpenseAdd from '../../screens/homeaddons/expenseadd';
 
 export type RootStackParams = {
     outset: undefined;
     login: undefined;
     register: undefined;
     home: undefined;
+    homeadd: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParams>();
@@ -53,6 +55,14 @@ export default function AuthScreens(){
                 options={{
                     headerShown: false
                 }}/>
+
+                <Stack.Screen
+                name='homeadd'
+                component={ExpenseAdd}
+                options={{
+                    headerShown: false
+                }}/>
+                
         </Stack.Navigator>
     </NavigationContainer>
     </AppProvider>
