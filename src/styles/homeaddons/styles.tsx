@@ -54,5 +54,17 @@ export const global = StyleSheet.create({
     container:{
         flex: 1,
         backgroundColor: '#F5F6FA'
+    },
+    space:{
+        height: '4%',
+        width: '100%'
+    },
+    align:{
+        alignItems: 'center'
+    },
+    line:{
+        width: '90%',
+        height: 2,
+        backgroundColor: '#FFC965'
     }
 })

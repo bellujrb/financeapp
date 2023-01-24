@@ -8,8 +8,14 @@ export default function ExpenseAdd(){
 
     return (
         <View style={global.container}>
+            
             <Header/>
             <Tip/>
+            <View style={global.space}/>
+            <View style={global.align}>
+            <View style={global.line}/>
+            </View>
+
         </View>
     )
 }
