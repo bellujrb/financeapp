@@ -3,52 +3,51 @@ import { StyleSheet } from "react-native";
 
 export const header = StyleSheet.create({
     align:{
-        height: '10%'
+        height: '10%',
+        flexDirection: 'row',
+        alignItems: 'center'
     },
     alignback:{
         padding: 20
-    }
-})
-
-export const tip = StyleSheet.create({
-    align:{
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    rectangle:{
-        width: 334,
-        height: 118,
-        borderRadius: 30,
-        flexDirection: 'row',
-        backgroundColor: '#FFC965',
-        alignItems: 'center',
-        justifyContent: 'space-around'
-    },
-    img:{
-        width: 190,
-        height: 120.75,
-        bottom: 1.5,
-        left: 22
-    },
-    align2:{
-        flexDirection: 'column',
-        width: '45%',
     },
     title:{
         fontFamily: 'Poppins',
-        fontWeight: '700',
-        fontSize: 10,
+        fontWeight: '500',
+        fontSize: 13,
 
-        color: '#FFFFFF'
-    },
-    subtitle:{
-        fontFamily: 'Poppins',
-        fontWeight: '400',
-        fontSize: 14,
-
-        color: '#FFFFFF'
+        color: '#151515'
     }
 })
+
+export const ill = StyleSheet.create({
+    align:{
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        right: 20
+    },
+    img1:{
+        width:  250,
+        height: 200
+    },
+    img2:{
+        width:  70,
+        height: 183
+    }
+})
+
+export const input = StyleSheet.create({
+    align:{
+        margin: 10
+    },
+    input:{
+        width: 305,
+        height: 37,
+        borderRadius: 15,
+        borderWidth: 1,
+        borderColor: '#DFE2E5'
+    }
+})
+
 
 export const global = StyleSheet.create({
     container:{
@@ -56,7 +55,7 @@ export const global = StyleSheet.create({
         backgroundColor: '#F5F6FA'
     },
     space:{
-        height: '4%',
+        height: '1%',
         width: '100%'
     },
     align:{
