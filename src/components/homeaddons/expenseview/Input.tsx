@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, TextInput } from 'react-native'
-import { input } from "../../styles/homeaddons/styles";
+import { input } from "../../../styles/homeaddons/expenseadd/styles";
 
 interface Props {
     title: string,

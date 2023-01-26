@@ -8,13 +8,17 @@ import Register from "../../screens/auth/register";
 import Home from "../../screens/home";
 import { AppProvider } from "../../services/context/context";
 import ExpenseAdd from '../../screens/homeaddons/expenseadd';
+import { Tips } from '../../screens/homeaddons/tips';
 
 export type RootStackParams = {
     outset: undefined;
     login: undefined;
     register: undefined;
     home: undefined;
-    homeadd: undefined;
+    expenseadd: undefined;
+    expenseview: undefined;
+    tips: undefined;
+    
 };
 
 const Stack = createStackNavigator<RootStackParams>();
@@ -57,8 +61,20 @@ export default function AuthScreens(){
                 }}/>
 
                 <Stack.Screen
-                name='homeadd'
+                name='expenseadd'
                 component={ExpenseAdd}
+                options={{
+                    headerShown: false
+                }}/>
+
+                <Stack.Screen
+                name='expenseview'
+                component={Home}
+                />
+
+                <Stack.Screen
+                name='tips'
+                component={Tips}
                 options={{
                     headerShown: false
                 }}/>

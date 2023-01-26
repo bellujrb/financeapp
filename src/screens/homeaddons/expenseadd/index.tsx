@@ -1,16 +1,16 @@
 import React from "react";
 import { View } from "react-native";
-import { Header } from "../../../components/homeaddons/Header";
-import { Illustration } from "../../../components/homeaddons/Illustration";
-import { Input } from "../../../components/homeaddons/Input";
-import { global } from "../../../styles/homeaddons/styles";
+import { Header } from "../../../components/homeaddons/global/Header";
+import { Illustration } from "../../../components/homeaddons/expenseview/Illustration";
+import { Input } from "../../../components/homeaddons/expenseview/Input";
+import { global } from "../../../styles/homeaddons/expenseadd/styles";
 
 export default function ExpenseAdd(){
 
     return (
         <View style={global.container}>
 
-            <Header/>
+            <Header name="Adicionar Despesa"/>
             <Illustration/>
             <View style={global.space}/>
 
@@ -19,8 +19,7 @@ export default function ExpenseAdd(){
                 <Input title="Forma de Pagamento"/>
                 <Input title="Data de Vencimento"/>
 
-                <View style={global.space}/>
-                <View style={global.space}/>
+                <View style={global.space2}/>
 
                 <View style={global.line}/>
             </View>

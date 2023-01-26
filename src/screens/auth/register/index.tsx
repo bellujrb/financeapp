@@ -45,7 +45,7 @@ export default function Register(){
             const errors: Record<string, () => void> = {
                 'auth/weak-password': () =>
                 console.log('Sua senha deve ter pelo menos 6 caracteres'),
-                'auth/invalid-email': () => console.log('Email incorreto')
+                'auth/invalid-email': () => console.log('Email do usuario incorreto')
             }
             !errors[err.code] &&
             console.log(

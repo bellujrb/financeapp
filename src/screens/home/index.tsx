@@ -22,7 +22,7 @@ export default function Home(){
     const context = useContext(AppContext);
 
     function goAdd() {
-        nav.navigate('homeadd')
+        nav.navigate('expenseadd')
     }
     
     useEffect(() => {

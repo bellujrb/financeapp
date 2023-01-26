@@ -58,6 +58,10 @@ export const global = StyleSheet.create({
         height: '1%',
         width: '100%'
     },
+    space2:{
+        height: '5%',
+        width: '100%'
+    },
     align:{
         alignItems: 'center'
     },
