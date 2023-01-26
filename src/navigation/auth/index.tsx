@@ -9,6 +9,7 @@ import Home from "../../screens/home";
 import { AppProvider } from "../../services/context/context";
 import ExpenseAdd from '../../screens/homeaddons/expenseadd';
 import { Tips } from '../../screens/homeaddons/tips';
+import { ExpenseView } from '../../screens/homeaddons/expenseview';
 
 export type RootStackParams = {
     outset: undefined;
@@ -69,7 +70,7 @@ export default function AuthScreens(){
 
                 <Stack.Screen
                 name='expenseview'
-                component={Home}
+                component={ExpenseView}
                 />
 
                 <Stack.Screen
