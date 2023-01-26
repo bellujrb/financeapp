@@ -1,11 +1,11 @@
 import React from "react";
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 
-export function ExpenseView(){
+export default function ExpenseView(){
 
     return (
         <View>
-            
+            <Text>MANUNTECAO</Text>
         </View>
     )
 }

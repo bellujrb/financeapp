@@ -2,14 +2,14 @@ import 'react-native-gesture-handler';
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import { AppProvider } from "../../services/context/context";
+import { Tips } from '../../screens/homeaddons/tips';
 import Outset from "../../screens/auth/outset";
 import Login from "../../screens/auth/login";
 import Register from "../../screens/auth/register";
 import Home from "../../screens/home";
-import { AppProvider } from "../../services/context/context";
 import ExpenseAdd from '../../screens/homeaddons/expenseadd';
-import { Tips } from '../../screens/homeaddons/tips';
-import { ExpenseView } from '../../screens/homeaddons/expenseview';
+import ExpenseView from '../../screens/homeaddons/expenseview';
 
 export type RootStackParams = {
     outset: undefined;
@@ -71,6 +71,9 @@ export default function AuthScreens(){
                 <Stack.Screen
                 name='expenseview'
                 component={ExpenseView}
+                options={{
+                    headerShown: false
+                }}
                 />
 
                 <Stack.Screen

@@ -20,10 +20,6 @@ export default function Home(){
     const nav = useNavigation<StackNavigationProp<RootStackParams>>();
 
     const context = useContext(AppContext);
-
-    function goAdd() {
-        nav.navigate('expenseadd')
-    }
     
     useEffect(() => {
 
@@ -34,11 +30,11 @@ export default function Home(){
         <View style={global.container}>
             <Header/>
             <View style={global.alignitens}>
-                <CubeIcon name="Ver Despesas" img={add} destiny={() => {
-                    goAdd();
+                <CubeIcon name="Ver Despesas" img={viewd} destiny={() => {
+                    nav.navigate('expenseview');
                 }}/>
-                <CubeIcon name="Adicionar Despesa" img={viewd} destiny={() => {
-                    goAdd();
+                <CubeIcon name="Adicionar Despesa" img={add} destiny={() => {
+                    nav.navigate('expenseadd')
                 }}/>
             </View>
             <Info/>
