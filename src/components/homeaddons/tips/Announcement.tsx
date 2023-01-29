@@ -8,14 +8,18 @@ export function Announcement(){
     return (
             <View style={ann.rectangle}>
 
-                <View>
+                <View style={ann.widthspace}>
                     <Text style={ann.title}>Sua vida financeira
                     esta precisando de uma reforma!</Text>
 
                     <TouchableOpacity>
-                        <Text style={ann.subtitle}>Assinar finance plus</Text>
+                        <Text style={ann.subtitle}>Assinar Finance Plus</Text>
                     </TouchableOpacity>
                 </View>
+
+                <Image
+                source={require('../../../assets/homeaddons/money.png')}
+                style={ann.img}/>
             </View>
     )
 }
