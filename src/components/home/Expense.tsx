@@ -3,11 +3,8 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import { expense } from '../../styles/home/styles';
 
 interface Props {
-    name?: string,
-    type?: string,
     quantity?: number,
-    price?: number,
-    level?: string
+    price?: string,
 }
 
 export function Expense ( props: Props ) {

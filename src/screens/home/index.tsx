@@ -38,7 +38,7 @@ export default function Home(){
                 }}/>
             </View>
             <Info/>
-            <Expense/>
+            <Expense price={'150,50'} quantity={8}/>
             <BuyDate numberBuy={25}/>
             <TipsFinance/>
         </View>
