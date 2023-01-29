@@ -48,6 +48,40 @@ export const input = StyleSheet.create({
     }
 })
 
+export const registerf = StyleSheet.create({
+    container:{
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-around'
+    },
+    title:{
+        fontFamily: 'Poppins',
+        fontWeight: '400',
+        fontSize: 12,
+
+        color: '#4D5661'
+    },
+    subtitle:{
+        fontFamily: 'Poppins',
+        fontWeight: '400',
+        fontSize: 15,
+
+        color: '#FFC965'
+    },
+    line1:{
+        top: 5,
+
+        height: 1,
+        width: 80,
+        backgroundColor: 'rgba(118, 103, 76, 0.7)'
+    },
+    line2:{
+        width: 1,
+        height: 80,
+        backgroundColor: '#FFC965'
+    }
+})
+
 
 export const global = StyleSheet.create({
     container:{
@@ -66,7 +100,8 @@ export const global = StyleSheet.create({
         alignItems: 'center'
     },
     line:{
-        width: '90%',
+        top: 10,
+        width: '82%',
         height: 2,
         backgroundColor: '#FFC965'
     }

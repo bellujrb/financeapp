@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, ScrollView } from "react-native";
 import { Header } from "../../../components/homeaddons/global/Header";
 import { Announcement } from "../../../components/homeaddons/tips/Announcement";
 import { Illustration } from "../../../components/homeaddons/tips/Illustration";
@@ -13,6 +13,7 @@ export function Tips(){
             <Header name="Dicas"/>
             <Illustration/>
             <Announcement/>
+            <View style={global.space}/>
 
             <View style={global.freetipscontainer}>
 
@@ -26,8 +27,12 @@ export function Tips(){
                 style={global.img}/>
             </View>
             <View style={global.backgroundend}>
-                <TipsFree title="Comece a investir o quanto antes."/>
-                <TipsFree title="Invista no seu desenvolvimento."/>
+                <ScrollView horizontal>
+                    <TipsFree title="Comece a investir o quanto antes."/>
+                    <TipsFree title="Invista no seu desenvolvimento."/>
+                    <TipsFree title="Defina metas pequenas e grandes."/>
+                    <TipsFree title="Use a tecnologia a favor."/>
+                </ScrollView>
             </View>
         </View>
     )

@@ -49,10 +49,11 @@ export const ann = StyleSheet.create({
 
 export const free = StyleSheet.create({
     rectangle:{
+        top: 10,
         margin: 10,
 
         width: 329,
-        height: 47,
+        height: 60,
         borderWidth: 1,
         borderColor: 'rgba(128, 130, 140, 0.31)',
         borderRadius: 6,
@@ -66,21 +67,20 @@ export const free = StyleSheet.create({
         alignItems: 'center'
     },
     img1:{
-        width: 24,
-        height: 24,
+        width: 30,
+        height: 30,
         right: 5
     },
     title:{
         fontFamily: 'Poppins',
         fontWeight: '400',
-        fontSize: 12,
+        fontSize: 12.5,
 
         color: '#000000',
-        bottom: 3
     },
     img2:{
-        width: 35,
-        height: 35
+        width: 45,
+        height: 45
     }
 })
 
@@ -119,6 +119,10 @@ export const global = StyleSheet.create({
         height: 99.7,
         top: 18,
         right: 20
+    },
+    space:{
+        height: '2%',
+        width: '100%'
     },
     backgroundend:{
         backgroundColor: '#FFFFFF',

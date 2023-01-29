@@ -4,7 +4,7 @@ import { button } from "../../styles/auth/styles";
 
 interface Props {
     text: string;
-    destiny: any;
+    destiny?: any;
 }
 
 export function Button(props: Props){

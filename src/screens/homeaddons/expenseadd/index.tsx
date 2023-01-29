@@ -4,6 +4,8 @@ import { Header } from "../../../components/homeaddons/global/Header";
 import { Illustration } from "../../../components/homeaddons/expenseview/Illustration";
 import { Input } from "../../../components/homeaddons/expenseview/Input";
 import { global } from "../../../styles/homeaddons/expenseadd/styles";
+import { RegisterFinance } from "../../../components/homeaddons/expenseview/RegisterFinance";
+import { Button } from "../../../components/auth/Button";
 
 export default function ExpenseAdd(){
 
@@ -24,6 +26,14 @@ export default function ExpenseAdd(){
                 <View style={global.line}/>
             </View>
 
+            <RegisterFinance/>
+
+            <View style={global.align}>
+                <View style={global.line}/>
+                <View style={global.space2}/>
+                
+                <Button text="CADASTRAR"/>
+            </View>
             
         </View>
     )
