@@ -3,6 +3,7 @@ import { View, Text, Image } from "react-native";
 import { Header } from "../../../components/homeaddons/global/Header";
 import { Announcement } from "../../../components/homeaddons/tips/Announcement";
 import { Illustration } from "../../../components/homeaddons/tips/Illustration";
+import { TipsFree } from "../../../components/homeaddons/tips/TipsFree";
 import { global } from "../../../styles/homeaddons/tips/styles";
 
 export function Tips(){
@@ -23,7 +24,10 @@ export function Tips(){
                 <Image
                 source={require('../../../assets/homeaddons/arrow.png')}
                 style={global.img}/>
-
+            </View>
+            <View style={global.backgroundend}>
+                <TipsFree title="Comece a investir o quanto antes."/>
+                <TipsFree title="Invista no seu desenvolvimento."/>
             </View>
         </View>
     )

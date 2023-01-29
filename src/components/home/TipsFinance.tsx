@@ -11,18 +11,18 @@ export function TipsFinance(){
 
     return (
         <View style={tips.rectangle}>
-            <TouchableOpacity style={tips.borderrectangle}>
+            <TouchableOpacity style={tips.borderrectangle} onPress={() => {
+                    nav.navigate('tips')
+                }}>
 
                 <Image
                 source={require('../../assets/utils/girlhome.png')}
                 style={tips.img}/>
 
-                <TouchableOpacity onPress={() => {
-                    nav.navigate('tips')
-                }}>
+                <View>
                     <Text style={tips.title}>Dicas</Text>
                     <Text style={tips.subtitle}>Confira nossas dicas para sua vida financeira.</Text>
-                </TouchableOpacity>
+                </View>
 
             </TouchableOpacity>
         </View>

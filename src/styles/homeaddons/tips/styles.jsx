@@ -44,17 +44,53 @@ export const ann = StyleSheet.create({
         width: 190,
         height: 124,
         right: 20,
-        top: 6
+    }
+})
+
+export const free = StyleSheet.create({
+    rectangle:{
+        margin: 10,
+
+        width: 329,
+        height: 47,
+        borderWidth: 1,
+        borderColor: 'rgba(128, 130, 140, 0.31)',
+        borderRadius: 6,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-around'
+    },
+    align:{
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center'
+    },
+    img1:{
+        width: 24,
+        height: 24,
+        right: 5
+    },
+    title:{
+        fontFamily: 'Poppins',
+        fontWeight: '400',
+        fontSize: 12,
+
+        color: '#000000',
+        bottom: 3
+    },
+    img2:{
+        width: 35,
+        height: 35
     }
 })
 
 export const global = StyleSheet.create({
     container:{
         flex: 1,
+        flexDirection: 'column'
     },
     freetipscontainer:{
         backgroundColor: '#FFFFFF',
-        height: '100%',
         flexDirection: 'row',
         justifyContent: 'space-around'
     },
@@ -83,5 +119,10 @@ export const global = StyleSheet.create({
         height: 99.7,
         top: 18,
         right: 20
+    },
+    backgroundend:{
+        backgroundColor: '#FFFFFF',
+        height: '100%',
+        alignItems: 'center',
     }
 })
