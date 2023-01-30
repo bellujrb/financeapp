@@ -105,7 +105,7 @@ export const expense = StyleSheet.create({
         width: '100%'
     },
     container:{
-        height: 135,
+        height: 100,
         width: 335,
         backgroundColor: '#FFFFFF',
         borderRadius: 15,
@@ -129,25 +129,6 @@ export const expense = StyleSheet.create({
         fontSize: 14,
 
         color: '#80828C'
-    },
-    button:{
-        marginTop: 8,
-
-        height: 31.77,
-        width: 85,
-
-        backgroundColor: '#FFC965',
-
-        justifyContent: 'center',
-        alignItems: 'center',
-
-        borderRadius: 6
-    },
-    titlebutton:{
-        fontFamily: 'Poppins',
-        fontWeight: '400',
-        fontSize: 13,
-        color: '#FFFFFF'
     },
     price:{
         marginLeft: 40,

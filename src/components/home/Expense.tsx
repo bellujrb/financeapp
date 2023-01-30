@@ -16,10 +16,6 @@ export function Expense ( props: Props ) {
         <View style={expense.organize2}>
             <Text style={expense.title}>Despesas pagas</Text>
             <Text style={expense.subtitle}>Este mes foi pago o total de {props.quantity} despesas</Text>
-
-            <TouchableOpacity style={expense.button}>
-                <Text style={expense.titlebutton}>Ver agora</Text>
-            </TouchableOpacity>
         </View>
 
         <Text style={expense.price}>R$ {props.price}</Text>
