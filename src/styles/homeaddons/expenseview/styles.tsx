@@ -33,7 +33,7 @@ export const pay = StyleSheet.create({
 
 export const statusp = StyleSheet.create({
     rectangle:{
-        marginTop: 10,
+        marginTop: 20,
         height: 72,
         width: 362,
 
