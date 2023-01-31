@@ -1,10 +1,10 @@
 import React from "react";
 import { View } from "react-native";
 import { Header } from "../../../components/homeaddons/global/Header";
-import { Illustration } from "../../../components/homeaddons/expenseview/Illustration";
-import { Input } from "../../../components/homeaddons/expenseview/Input";
+import { Illustration } from "../../../components/homeaddons/expenseadd/Illustration";
+import { Input } from "../../../components/homeaddons/expenseadd/Input";
 import { global } from "../../../styles/homeaddons/expenseadd/styles";
-import { RegisterFinance } from "../../../components/homeaddons/expenseview/RegisterFinance";
+import { RegisterFinance } from "../../../components/homeaddons/expenseadd/RegisterFinance";
 import { Button } from "../../../components/auth/Button";
 
 export default function ExpenseAdd(){

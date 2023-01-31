@@ -116,6 +116,52 @@ export const statusp = StyleSheet.create({
     }
 })
 
+export const statusann = StyleSheet.create({
+    rectangle:{
+        marginTop: 20,
+
+        backgroundColor: '#FFFFFF',
+        width: '100%',
+        height: '35%',
+
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    border:{
+        width: 330,
+        height: 105,
+        borderWidth: 1,
+        borderColor: '#F1F3FC',
+
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    img:{
+        width: 111.11,
+        height: 120,
+        bottom: 16
+    },
+    align:{
+        justifyContent: 'center',
+    },
+    title:{
+        fontFamily: 'Poppins',
+        fontWeight: '400',
+        fontSize: 13,
+
+        color: '#000000',
+    },
+    subtitle:{
+        width: '60%',
+
+        fontFamily: 'Poppins',
+        fontWeight: '400',
+        fontSize: 13,
+
+        color: '#787A84',
+    }
+})
+
 export const global = StyleSheet.create({
     container:{
         flex: 1,

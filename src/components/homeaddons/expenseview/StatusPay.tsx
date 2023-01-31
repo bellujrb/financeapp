@@ -7,9 +7,10 @@ import { statusp } from "../../../styles/homeaddons/expenseview/styles";
 
 interface Props {  
     nameProduct: string,
+    icon: string,
     price: number,
-    method: string,
-    x: number,
+    method?: string,
+    x: number | string,
     status: string,
     date: string
 }
@@ -17,19 +18,19 @@ export function StatusPay(props: Props){
 
     return (
         <View style={statusp.rectangle}>
-            <Icon name="car-sport-outline" color='#FFC965' size={24}/>
+            <Icon name={props.icon} color='#FFC965' size={24}/>
             <View style={statusp.line}/>
             
             <View>
 
                 <View style={statusp.column}>
-                    <Text style={statusp.text}>{props.nameProduct} [1/24]</Text>
+                    <Text style={statusp.text}>{props.nameProduct}</Text>
 
                     <View style={statusp.row}>
                         <Text style={statusp.text}>R$ {props.price}.50</Text>
                         <View style={statusp.line}/>
                         <Text style={statusp.methodtext}>{props.method}</Text>
-                        <Text style={statusp.cptext}>{props.x}X</Text>
+                        <Text style={statusp.cptext}>{props.x}</Text>
                     </View>
                 </View>
 
