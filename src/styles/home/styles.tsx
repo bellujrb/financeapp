@@ -19,6 +19,7 @@ export const header = StyleSheet.create({
         color: '#FFFFFF'
     },
     subtitle:{
+        width: '48%',
         marginTop: 10,
 
         fontFamily: 'Poppins',
@@ -45,6 +46,17 @@ export const header = StyleSheet.create({
         height: 1,
         opacity: 0.5,
         backgroundColor: '#FFFFFF'
+    },
+    row:{
+        flexDirection: 'row'
+    },
+    iconsettings:{
+        margin: 5,
+        top: 3,
+        left: 5
+    },
+    scroll:{
+        height: '50%'
     }
 })
 
