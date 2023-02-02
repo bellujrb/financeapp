@@ -38,8 +38,8 @@ export default function Home(){
                 }}/>
             </View>
             <Info/>
-            <Expense price={'150,50'} quantity={8}/>
-            <BuyDate numberBuy={25}/>
+            <Expense price={context?.paids} quantity={context?.quantitypaids}/>
+            <BuyDate numberBuy={context?.daybuy}/>
             <TipsFinance/>
         </View>
     )

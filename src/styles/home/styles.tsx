@@ -19,7 +19,6 @@ export const header = StyleSheet.create({
         color: '#FFFFFF'
     },
     subtitle:{
-        width: '48%',
         marginTop: 10,
 
         fontFamily: 'Poppins',

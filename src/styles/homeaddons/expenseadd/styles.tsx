@@ -38,12 +38,46 @@ export const input = StyleSheet.create({
     align:{
         margin: 10
     },
-    input:{
+    rectangle:{
         width: 305,
         height: 37,
         borderRadius: 15,
         borderWidth: 1,
-        borderColor: '#DFE2E5'
+        borderColor: '#DFE2E5',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexDirection: 'row'
+    },
+    pickerform:{
+        width: 125,
+        height: 22,
+        backgroundColor: '#FFC965',
+        borderRadius: 24,
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        marginLeft: 5
+    },
+    title:{
+        fontFamily: 'Poppins',
+        fontWeight: '400',
+        fontSize: 12,
+
+        color: '#000000',
+        marginLeft: 5
+    },
+    organizepicker:{
+        padding: 15,
+        marginLeft: 5
+    },
+    input:{
+        marginRight: 10,
+
+        fontFamily: 'Poppins',
+        fontWeight: '400',
+        fontSize: 12,
+        color: '#000000',
+        width: '50%'
     }
 })
 

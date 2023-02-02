@@ -17,9 +17,14 @@ export default function ExpenseAdd(){
             <View style={global.space}/>
 
             <View style={global.align}>
-                <Input title="Nome e Categoria"/>
-                <Input title="Forma de Pagamento"/>
-                <Input title="Data de Vencimento"/>
+                <Input title="Nome e Categoria" category="Nenhuma"
+                citem1="Assinatura"
+                citem2="Compras"
+                citem3="Restaurante"/>
+                <Input title="Forma de Pagamento" category="Nenhum"
+                citem1="A Vista"
+                citem2="Boleto"
+                citem3="C. Credito"/>
 
                 <View style={global.space2}/>
 

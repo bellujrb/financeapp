@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 import { buy } from "../../styles/home/styles";
 
 interface Props {
-    numberBuy: number;
+    numberBuy: any;
 }
 
 export function BuyDate(props: Props){

@@ -4,7 +4,7 @@ import { expense } from '../../styles/home/styles';
 
 interface Props {
     quantity?: number,
-    price?: string,
+    price?: number,
 }
 
 export function Expense ( props: Props ) {
