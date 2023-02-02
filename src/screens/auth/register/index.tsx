@@ -10,7 +10,7 @@ import { Button } from "../../../components/global/Button";
 import { MsgAccount } from "../../../components/auth/MsgAccount";
 import { global } from "../../../styles/auth/styles";
 import firebase  from '../../../services/database/firebase'
-import { AppContext } from "../../../services/context/context";
+import { AppContext } from "../../../context/context";
 
 export default function Register(){
 

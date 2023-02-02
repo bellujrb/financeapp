@@ -8,7 +8,7 @@ import { Input } from "../../../components/auth/Input";
 import { ClickText } from "../../../components/auth/ClickText";
 import { Button } from "../../../components/global/Button";
 import { MsgAccount } from "../../../components/auth/MsgAccount";
-import { AppContext } from "../../../services/context/context";
+import { AppContext } from "../../../context/context";
 import { global } from "../../../styles/auth/styles";
 
 import firebase  from '../../../services/database/firebase'

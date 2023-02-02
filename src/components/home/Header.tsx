@@ -7,6 +7,7 @@ import Icon from 'react-native-vector-icons/dist/Ionicons';
 
 interface Props {
     name?: string;
+    expense: number;
 }
 
 export function Header(props: Props){
@@ -22,7 +23,7 @@ export function Header(props: Props){
                     </TouchableOpacity>
                 </View>
                     <View style={header.row}>
-                        <Text style={header.subtitle}>Despesa mensal acumulada de R$ 3.089,09</Text>
+                        <Text style={header.subtitle}>Despesa acumulada de R$ {props.expense}</Text>
                     </View>
             </View>
         </View>

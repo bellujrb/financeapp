@@ -1,28 +1,9 @@
 import React, { createContext, ReactNode, useState } from 'react'
+import { AppContextInterface } from './interfaces/AppContext'
+import { Props } from './interfaces/Props'
 
-interface Props {
-    children?: ReactNode
-}
 
-interface AppContext {
-    name: string
-    email: string;
-    password: string;
-    id: string;
-    paids: number;
-    quantitypaids: number;
-    daybuy: number;
-
-    setName: React.Dispatch<React.SetStateAction<string>>
-    setEmail: React.Dispatch<React.SetStateAction<string>>
-    setPassword: React.Dispatch<React.SetStateAction<string>>
-    setId: React.Dispatch<React.SetStateAction<string>>
-    setPaids: React.Dispatch<React.SetStateAction<number>>
-    setQuantityPaids: React.Dispatch<React.SetStateAction<number>>
-    setDayBuy: React.Dispatch<React.SetStateAction<number>>
-}
-
-export const AppContext = createContext<AppContext | null>(null)
+export const AppContext = createContext<AppContextInterface | null>(null)
 
 export const AppProvider = ({ children }: Props) => {
 

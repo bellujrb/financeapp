@@ -3,7 +3,7 @@ import { View } from "react-native";
 import { global } from "../../styles/home/styles";
 import { CubeIcon } from "../../components/home/CubeIcon";
 import { Header } from "../../components/home/Header";
-import { AppContext } from "../../services/context/context";
+import { AppContext } from "../../context/context";
 
 import add from '../../assets/utils/add.png';
 import viewd from '../../assets/utils/viewd.png';
@@ -28,7 +28,7 @@ export default function Home(){
 
     return (
         <View style={global.container}>
-            <Header/>
+            <Header expense={0}/>
             <View style={global.alignitens}>
                 <CubeIcon name="Ver Despesas" img={viewd} destiny={() => {
                     nav.navigate('expenseview');

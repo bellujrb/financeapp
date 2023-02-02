@@ -2,7 +2,7 @@ import 'react-native-gesture-handler';
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { AppProvider } from "../../services/context/context";
+import { AppProvider } from "../../context/context";
 import { Tips } from '../../screens/homeaddons/tips';
 import Outset from "../../screens/auth/outset";
 import Login from "../../screens/auth/login";
