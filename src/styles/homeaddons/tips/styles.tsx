@@ -87,7 +87,7 @@ export const free = StyleSheet.create({
 export const global = StyleSheet.create({
     container:{
         flex: 1,
-        flexDirection: 'column'
+        flexDirection: 'column',
     },
     freetipscontainer:{
         backgroundColor: '#FFFFFF',
@@ -125,8 +125,8 @@ export const global = StyleSheet.create({
         width: '100%'
     },
     backgroundend:{
+        height: 160,
         backgroundColor: '#FFFFFF',
-        height: '100%',
         alignItems: 'center',
     }
 })

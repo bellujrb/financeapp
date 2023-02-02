@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { View } from "react-native";
+import { View, StatusBar } from "react-native";
 import { global } from "../../styles/home/styles";
 import { CubeIcon } from "../../components/home/CubeIcon";
 import { Header } from "../../components/home/Header";
@@ -28,6 +28,7 @@ export default function Home(){
 
     return (
         <View style={global.container}>
+            <StatusBar/>
             <Header expense={0}/>
             <View style={global.alignitens}>
                 <CubeIcon name="Ver Despesas" img={viewd} destiny={() => {

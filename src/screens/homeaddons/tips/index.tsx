@@ -9,7 +9,7 @@ import { global } from "../../../styles/homeaddons/tips/styles";
 export function Tips(){
 
     return (
-        <View style={global.container}>
+        <ScrollView style={global.container} >
             <Header name="Dicas"/>
             <Illustration/>
             <Announcement/>
@@ -34,6 +34,6 @@ export function Tips(){
                     <TipsFree title="Use a tecnologia a favor."/>
                 </ScrollView>
             </View>
-        </View>
+        </ScrollView>
     )
 }
