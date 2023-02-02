@@ -11,7 +11,7 @@ export function ExpensePay(props: Props){
         <View style={pay.container}>
             <View>
                 <Text style={pay.title}>Despesa total a pagar</Text>
-                <Text style={pay.subtitle}>R$ {props.price}.50</Text>
+                <Text style={pay.subtitle}>R$ {props.price}</Text>
             </View>
 
             <Image 
