@@ -13,4 +13,4 @@
 
 | Technologies | Status |
 |---|---|
-| JS, TYPESCRIPT, REACT NATIVE, FIREBASE, FIGMA | 40% concluded |
+| JS, TYPESCRIPT, REACT NATIVE, FIREBASE, FIGMA | 50% concluded |
