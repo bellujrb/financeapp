@@ -35,7 +35,8 @@ export default function AuthScreens(){
                     name="outset"
                     component={Outset}
                     options={{
-                    headerShown: false
+                        headerShown: false,
+                        gestureEnabled: false
                     }}
                 />
 
@@ -43,7 +44,8 @@ export default function AuthScreens(){
                     name="login"
                     component={Login}
                     options={{
-                        headerShown: false
+                        headerShown: false,
+                        gestureEnabled: false
                     }}
                 />
 
@@ -51,28 +53,32 @@ export default function AuthScreens(){
                     name="register"
                     component={Register}
                     options={{
-                        headerShown: false
+                        headerShown: false,
+                        gestureEnabled: false
                     }}
                 />
                 <Stack.Screen
                 name="home"
                 component={Home}
                 options={{
-                    headerShown: false
+                    headerShown: false,
+                    gestureEnabled: false
                 }}/>
 
                 <Stack.Screen
                 name='expenseadd'
                 component={ExpenseAdd}
                 options={{
-                    headerShown: false
+                    headerShown: false,
+                    gestureEnabled: false
                 }}/>
 
                 <Stack.Screen
                 name='expenseview'
                 component={ExpenseView}
                 options={{
-                    headerShown: false
+                    headerShown: false,
+                    gestureEnabled: false
                 }}
                 />
 
@@ -80,7 +86,8 @@ export default function AuthScreens(){
                 name='tips'
                 component={Tips}
                 options={{
-                    headerShown: false
+                    headerShown: false,
+                    gestureEnabled: false
                 }}/>
                 
         </Stack.Navigator>

@@ -5,7 +5,7 @@ import { Illustration } from "../../../components/homeaddons/expenseadd/Illustra
 import { Input } from "../../../components/homeaddons/expenseadd/Input";
 import { global } from "../../../styles/homeaddons/expenseadd/styles";
 import { RegisterFinance } from "../../../components/homeaddons/expenseadd/RegisterFinance";
-import { Button } from "../../../components/auth/Button";
+import { Button } from "../../../components/global/Button";
 
 export default function ExpenseAdd(){
 
@@ -17,14 +17,18 @@ export default function ExpenseAdd(){
             <View style={global.space}/>
 
             <View style={global.align}>
+
                 <Input title="Nome e Categoria" category="Nenhuma"
                 citem1="Assinatura"
                 citem2="Compras"
-                citem3="Restaurante"/>
+                citem3="Restaurante"
+                />
+
                 <Input title="Forma de Pagamento" category="Nenhum"
                 citem1="A Vista"
                 citem2="Boleto"
-                citem3="C. Credito"/>
+                citem3="C. Credito"
+                />
 
                 <View style={global.space2}/>
 

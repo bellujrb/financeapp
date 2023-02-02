@@ -6,7 +6,7 @@ import { RootStackParams } from "../../../navigation/auth";
 import { Header } from "../../../components/auth/Header";
 import { Input } from "../../../components/auth/Input";
 import { ClickText } from "../../../components/auth/ClickText";
-import { Button } from "../../../components/auth/Button";
+import { Button } from "../../../components/global/Button";
 import { MsgAccount } from "../../../components/auth/MsgAccount";
 import { AppContext } from "../../../services/context/context";
 import { global } from "../../../styles/auth/styles";
