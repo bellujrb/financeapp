@@ -99,11 +99,18 @@ export const registerf = StyleSheet.create({
         fontWeight: '400',
         fontSize: 15,
 
-        color: '#FFC965'
+        color: '#FFC965',
+    },
+    input:{
+        bottom: 13,
+        fontFamily: 'Poppins',
+        fontWeight: '400',
+        fontSize: 15,
+
+        color: '#FFC965',
     },
     line1:{
-        top: 5,
-
+        bottom: 20,
         height: 1,
         width: 80,
         backgroundColor: 'rgba(118, 103, 76, 0.7)'
@@ -112,6 +119,9 @@ export const registerf = StyleSheet.create({
         width: 1,
         height: 80,
         backgroundColor: '#FFC965'
+    },
+    row:{
+        flexDirection: 'row',
     }
 })
 

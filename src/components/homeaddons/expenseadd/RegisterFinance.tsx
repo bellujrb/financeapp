@@ -1,14 +1,23 @@
 import React from "react";
-import { Text, View } from 'react-native'
+import { Text, TextInput, View } from 'react-native'
 import { registerf } from "../../../styles/homeaddons/expenseadd/styles";
 
-export function RegisterFinance (){
+interface Props {
+    price: number
+}
+
+export function RegisterFinance (props: Props){
 
     return (
         <View style={registerf.container}>
             <View>
                 <Text style={registerf.title}>Valor</Text>
-                <Text style={registerf.subtitle}>R$ 0,00</Text>
+                <View style={registerf.row}>
+                    <Text style={registerf.subtitle}>R$</Text>
+                    <TextInput maxLength={6} keyboardType='number-pad' 
+                    
+                    style={registerf.input}/>
+                </View>
                 <View style={registerf.line1}/>
             </View>
 

@@ -7,10 +7,11 @@ export const AppContext = createContext<AppContextInterface | null>(null)
 
 export const AppProvider = ({ children }: Props) => {
 
-    const [name, setName] = useState('unkdown')
+    const [name, setName] = useState('Unkdown')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
-    const [id, setId] = useState('')
+    const [id, setId] = useState('');
+    const [totalExpense, setTotalExpense] = useState(0);
     const [paids, setPaids] = useState(0);
     const [quantitypaids, setQuantityPaids] = useState(0);
     const [daybuy, setDayBuy] = useState(0);
@@ -26,6 +27,8 @@ export const AppProvider = ({ children }: Props) => {
                 id,
                 setId,
                 
+                totalExpense,
+                setTotalExpense,
                 paids,
                 setPaids,
                 quantitypaids,

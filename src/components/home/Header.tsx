@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, ScrollView, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import { header } from "../../styles/home/styles";
 
 //@ts-ignore
@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/dist/Ionicons';
 
 interface Props {
     name?: string;
-    expense: number;
+    expense: any;
 }
 
 export function Header(props: Props){
@@ -17,7 +17,7 @@ export function Header(props: Props){
             <View style={header.align}>
 
                 <View style={header.row}>
-                    <Text style={header.title}>Ola, Belluzzo</Text>
+                    <Text style={header.title}>Ola, {props.name}</Text>
                     <TouchableOpacity style={header.iconsettings}>
                         <Icon name='log-out-outline' color='#FFFFFF' size={24}/>
                     </TouchableOpacity>

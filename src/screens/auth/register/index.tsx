@@ -36,11 +36,16 @@ export default function Register(){
                 .createUserWithEmailAndPassword(context?.email, context?.password)
             firebase.database().ref('users').child(value.user.uid).set({
                 name: context?.name,
-                email: context?.email
+                email: context?.email,
+                uid: context?.id,
+                totalExpense: context?.totalExpense,
+                paids: context?.paids,
+                quantitypaids: context?.quantitypaids,
+                daybuy: context?.daybuy
             })
                 console.log(' Usuario Criado ' + value.user.email + value.user.uid)
-                context?.setId(value.user.uid)
                 nav.navigate('home')
+                context?.setId(value.user.uid)
         } catch (err: any) {
             const errors: Record<string, () => void> = {
                 'auth/weak-password': () =>

@@ -28,8 +28,8 @@ export default function Home(){
 
     return (
         <View style={global.container}>
-            <StatusBar/>
-            <Header expense={0}/>
+            <StatusBar backgroundColor={'#FFC965'} barStyle="light-content"/>
+            <Header expense={context?.totalExpense} name={context?.name}/>
             <View style={global.alignitens}>
                 <CubeIcon name="Ver Despesas" img={viewd} destiny={() => {
                     nav.navigate('expenseview');

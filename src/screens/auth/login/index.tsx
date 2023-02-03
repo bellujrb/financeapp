@@ -26,9 +26,9 @@ export default function Login(){
     async function LoginAccount() {
         await firebase.auth().signInWithEmailAndPassword(context?.email, context?.password)
         .then( (value:any) => {
-            console.log(value);
-            nav.navigate('home');
-            console.log(`Logado com sucesso UID: ${value.user.uid}`)
+            context?.setId(value.user.uid);
+            nav.navigate('home')
+            console.log(value.user.uid)
         })
         .catch( (err:string) => {
             console.log(err)

@@ -35,7 +35,7 @@ export default function ExpenseAdd(){
                 <View style={global.line}/>
             </View>
 
-            <RegisterFinance/>
+            <RegisterFinance price={10.50}/>
 
             <View style={global.align}>
                 <View style={global.line}/>
