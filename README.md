@@ -1,7 +1,5 @@
 <h1 align="center">Finance App</h1>
 
-<p> Full finance app under development, with the designer made from 0 by me by figma.</p>
-
 <h2>Download the APK</h1>
 <p>COMING SOON...</p>
 
@@ -13,4 +11,4 @@
 
 | Technologies | Status |
 |---|---|
-| JS, TYPESCRIPT, REACT NATIVE, FIREBASE, FIGMA | 50% concluded |
+| JS, TYPESCRIPT, REACT NATIVE, FIREBASE, FIGMA | 65% concluded |
