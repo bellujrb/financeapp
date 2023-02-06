@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { View } from "react-native";
+import { Alert, View } from "react-native";
 import { Header } from "../../../components/homeaddons/global/Header";
 import { Illustration } from "../../../components/homeaddons/expenseadd/Illustration";
 import { Input } from "../../../components/homeaddons/expenseadd/Input";
@@ -29,9 +29,9 @@ export default function ExpenseAdd(){
         const myFinances = await AsyncStorage.getItem('1')
         const myFinancesFormated = myFinances ? JSON.parse(myFinances) : null
         setTest(myFinancesFormated);
-    }
 
-    console.log('setTest FORMAT', test);
+        console.log('VIEWDATA ', myFinancesFormated);
+    }
 
     return (
         <View style={global.container}>

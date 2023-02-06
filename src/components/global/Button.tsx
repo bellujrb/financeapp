@@ -39,10 +39,6 @@ export function Button(props: Props){
         }
 
     const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
-    
-    useEffect(() => {
-        console.log('test', props)
-    }, [props])
 
     return (
         <View>
