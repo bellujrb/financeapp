@@ -12,7 +12,6 @@ export default function ExpenseAdd(){
 
     const [name, setName] = useState('');
     const [payment, setPayment] = useState();
-    const [test, setTest] = useState();
 
     async function saveData(){
         const oneData = { 
@@ -21,14 +20,12 @@ export default function ExpenseAdd(){
             payment: payment
         }
         await AsyncStorage.setItem(oneData.id, JSON.stringify(oneData))
-        console.log(oneData)
         viewData();
     }
 
     async function viewData(){
         const myFinances = await AsyncStorage.getItem('1')
         const myFinancesFormated = myFinances ? JSON.parse(myFinances) : null
-        setTest(myFinancesFormated);
 
         console.log('VIEWDATA ', myFinancesFormated);
     }

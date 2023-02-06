@@ -1,0 +1,30 @@
+async function saveData(){
+        const oneData = { 
+            id: '1',
+            name: name,
+            payment: payment
+        }
+        await AsyncStorage.setItem(oneData.id, JSON.stringify(oneData))
+        console.log(oneData);
+        console.log('test generate', generateId())
+        generateId();
+        viewData();
+    }
+
+    async function viewData(){
+        const myFinances = await AsyncStorage.getItem('1')
+        const myFinancesFormated = myFinances ? JSON.parse(myFinances) : null
+
+        console.log('VIEWDATA ', myFinancesFormated);
+    }
+
+    async function generateId(){
+        let keys: any
+        keys = await AsyncStorage.getAllKeys();
+        console.log(keys);
+
+        if(keys <= 0){
+            return 1
+        }
+        return keys.length + 1
+    }

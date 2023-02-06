@@ -53,7 +53,7 @@ export function Button(props: Props){
                 justifyContent: 'center',
                 alignItems: 'center',
 
-                opacity: opacity
+                //opacity: opacity
             }} onPress={async (params:any) => {
                 animatedLogin();
                 await props.destiny();
