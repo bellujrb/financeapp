@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { View, Text, TouchableOpacity, Animated } from "react-native";
 import { button } from "../../styles/auth/styles";
 
@@ -40,6 +40,10 @@ export function Button(props: Props){
 
     const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
     
+    useEffect(() => {
+        console.log('test', props)
+    }, [props])
+
     return (
         <View>
             <View style={button.organizebutton}/>

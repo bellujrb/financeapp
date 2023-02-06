@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { View } from "react-native";
 import { Header } from "../../../components/homeaddons/global/Header";
 import { Illustration } from "../../../components/homeaddons/expenseadd/Illustration";
@@ -9,6 +10,23 @@ import { Button } from "../../../components/global/Button";
 
 export default function ExpenseAdd(){
 
+    const [name, setName] = useState('');
+    const [payment, setPayment] = useState();
+
+    async function saveData(){
+        const oneData = {
+            id: '1',
+            name: name,
+            payment: payment
+        }
+        await AsyncStorage.setItem(oneData.id, oneData.name, oneData.payment)
+        viewData();
+    }
+
+    async function viewData(){
+        console.log(await AsyncStorage.getItem('1'))
+    }
+
     return (
         <View style={global.container}>
 
@@ -18,13 +36,17 @@ export default function ExpenseAdd(){
 
             <View style={global.align}>
 
-                <Input title="Nome e Categoria" category="Nenhuma"
+                <Input title="Nome e Categoria" category="Nenhuma" value={name}
+                setValue={setName}
+
                 citem1="Assinatura"
                 citem2="Compras"
                 citem3="Restaurante"
                 />
 
                 <Input title="Forma de Pagamento" category="Nenhum"
+                value={payment} setValue={setPayment}
+
                 citem1="A Vista"
                 citem2="Boleto"
                 citem3="C. Credito"
@@ -41,7 +63,7 @@ export default function ExpenseAdd(){
                 <View style={global.line}/>
                 <View style={global.space2}/>
                 
-                <Button text="CADASTRAR"/>
+                <Button text="CADASTRAR" destiny={saveData}/>
             </View>
             
         </View>

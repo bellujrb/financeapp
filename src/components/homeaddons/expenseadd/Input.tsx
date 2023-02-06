@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, TextInput } from 'react-native'
 import { input } from "../../../styles/homeaddons/expenseadd/styles";
 import { Picker } from "@react-native-picker/picker";
 
 interface Props {
     title: string,
+    value: any,
+    setValue: any,
+
+
     category: string,
     citem1?: string,
     citem2?: string,
@@ -26,7 +30,10 @@ export function Input(props: Props){
                     </Picker>
                 </View>
                 <TextInput style={input.input}
-                maxLength={12}/>
+                    maxLength={12}
+                    value={props.value}
+                    onChangeText={value => props.setValue(value)}
+                />
             </View>
         </View>
     )
