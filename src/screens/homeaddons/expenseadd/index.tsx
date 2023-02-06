@@ -12,20 +12,26 @@ export default function ExpenseAdd(){
 
     const [name, setName] = useState('');
     const [payment, setPayment] = useState();
+    const [test, setTest] = useState();
 
     async function saveData(){
-        const oneData = {
+        const oneData = { 
             id: '1',
             name: name,
             payment: payment
         }
-        await AsyncStorage.setItem(oneData.id, oneData.name, oneData.payment)
+        await AsyncStorage.setItem(oneData.id, JSON.stringify(oneData))
+        console.log(oneData)
         viewData();
     }
 
     async function viewData(){
-        console.log(await AsyncStorage.getItem('1'))
+        const myFinances = await AsyncStorage.getItem('1')
+        const myFinancesFormated = myFinances ? JSON.parse(myFinances) : null
+        setTest(myFinancesFormated);
     }
+
+    console.log('setTest FORMAT', test);
 
     return (
         <View style={global.container}>
