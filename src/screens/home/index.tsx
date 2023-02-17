@@ -31,10 +31,10 @@ export default function Home(){
             <StatusBar backgroundColor={'#FFC965'} barStyle="light-content"/>
             <Header expense={context?.totalExpense} name={context?.name}/>
             <View style={global.alignitens}>
-                <CubeIcon name="Ver Despesas" img={viewd} destiny={() => {
+                <CubeIcon name="Historico" icon="ios-pricetags-outline" destiny={() => {
                     nav.navigate('expenseview');
                 }}/>
-                <CubeIcon name="Adicionar Despesa" img={add} destiny={() => {
+                <CubeIcon name="Adicionar" icon="ios-cash-outline" destiny={() => {
                     nav.navigate('expenseadd')
                 }}/>
             </View>

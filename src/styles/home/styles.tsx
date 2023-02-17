@@ -64,30 +64,37 @@ export const cubeicon = StyleSheet.create({
     cubeicon:{
         margin: 5,
         backgroundColor: '#FFFFFF',
-        width: 120,
-        height: 90,
+        width: 90,
+        height: 65,
 
         borderRadius: 10,
         bottom: 40,
         alignItems: 'center',
         justifyContent: 'center',
     },
+    cicle:{
+        width: 34,
+        height: 34,
+        borderRadius: 34,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#F5F6FA'
+    },
     icon:{
-        width: 45.52,
-        height: 47.99,
-        bottom: 5,
+        width: 22,
+        height: 22,
     },
     title:{
         fontFamily: 'Poppins',
         fontWeight: '400',
-        fontSize: 12,
+        fontSize: 13.5,
         color: '#787A84'
     }
 })
 
 export const info = StyleSheet.create({
     organize:{
-        bottom: 20,
+        bottom: 25,
         padding: 10,
         marginLeft: 10,
 
@@ -96,7 +103,7 @@ export const info = StyleSheet.create({
     title:{
         fontFamily: 'Poppins',
         fontWeight: '500',
-        fontSize: 15,
+        fontSize: 14,
 
         color: '#FFC965',
     },
@@ -105,7 +112,7 @@ export const info = StyleSheet.create({
 
         fontFamily: 'Poppins',
         fontWeight: '400',
-        fontSize: 15,
+        fontSize: 13.5,
 
         color: '#80828C'
     }
@@ -138,7 +145,7 @@ export const expense = StyleSheet.create({
         marginTop: 5,
         fontFamily: 'Poppins',
         fontWeight: '400',
-        fontSize: 14,
+        fontSize: 13.5,
 
         color: '#80828C'
     },
@@ -206,7 +213,7 @@ export const tips = StyleSheet.create({
     title:{
         fontFamily: 'Poppins',
         fontWeight: '700',
-        fontSize: 13,
+        fontSize: 14,
 
         color: '#000000'
     },
@@ -216,7 +223,7 @@ export const tips = StyleSheet.create({
 
         fontFamily: 'Poppins',
         fontWeight: '400',
-        fontSize: 13,
+        fontSize: 13.5,
 
         color: '#787A84'
     }
