@@ -8,7 +8,6 @@ import Outset from "../../screens/auth/outset";
 import Login from "../../screens/auth/login";
 import Register from "../../screens/auth/register";
 import Home from "../../screens/home";
-import ExpenseAdd from '../../screens/homeaddons/expenseadd';
 import ExpenseView from '../../screens/homeaddons/expenseview';
 
 export type RootStackParams = {
@@ -67,7 +66,7 @@ export default function AuthScreens(){
 
                 <Stack.Screen
                 name='expenseadd'
-                component={ExpenseAdd}
+                component={Home}
                 options={{
                     headerShown: false,
                     gestureEnabled: false
